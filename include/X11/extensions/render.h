@@ -33,7 +33,7 @@ typedef XID		PictFormat;
 
 #define RENDER_NAME	"RENDER"
 #define RENDER_MAJOR	0
-#define RENDER_MINOR	11
+#define RENDER_MINOR	12
 
 #define X_RenderQueryVersion		    0
 #define X_RenderQueryPictFormats	    1
@@ -77,7 +77,9 @@ typedef XID		PictFormat;
 #define X_RenderCreateLinearGradient        34
 #define X_RenderCreateRadialGradient        35
 #define X_RenderCreateConicalGradient       36
-#define RenderNumberRequests		    (X_RenderCreateConicalGradient+1)
+/* 0.12 */
+#define X_RenderCreateColorGlyphSet	    37
+#define RenderNumberRequests		    (X_RenderCreateColorGlyphSet+1)
 
 #define BadPictFormat			    0
 #define BadPicture			    1
