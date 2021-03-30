@@ -1,5 +1,5 @@
 			The Present Extension
-			     Version 1.2
+			     Version 1.3
 			      2018-02-26
       
 			    Keith Packard
@@ -338,6 +338,29 @@ The name of this extension is "Present"
 	defined by the extension, but is expected to be on the order
 	of milliseconds or less.
 
+┌───
+    PresentPixmap2
+	window: WINDOW
+	pixmap: PIXMAP
+	serial: CARD32
+	valid-area: REGION or None
+	update-area: REGION or None
+	x-off, y-off: INT16
+	target-crtc: CRTC or None
+	wait-syncobj: DRI3SYNCOBJ
+	wait-point: CARD64
+	idle-syncobj: DRI3SYNCOBJ
+	idle-point: CARD64
+	options: SETofPRESENTOPTION
+	target-msc: CARD64
+	divisor: CARD64
+	remainder: CARD64
+	notifies: LISTofPRESENTNOTIFY
+└───
+	Errors: Window, Pixmap, Match
+
+	Same as PresentPixmap except use timelined syncobj as wait/idle
+	fence representation.
 
 7.1 Requests proposed for a later Present extension version
 
