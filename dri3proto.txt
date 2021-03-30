@@ -1,5 +1,5 @@
 			  The DRI3 Extension
-			     Version 1.2
+			     Version 1.3
 			      2018-02-28
 
 			    Keith Packard
@@ -38,6 +38,11 @@ Louis-Francis Ratté-Boulianne <lfrb@collabora.com>
 			     ❄ ❄ ❄  ❄  ❄ ❄ ❄ 
 
 2. Data Types
+
+DRI3SYNCOBJ { XID }
+
+	Defines a unique object for client and server synchronization.
+	On Linux, it's based on timeline DRM syncobj.
 
 The DRI3 extension uses the RandR extension Provider data type to
 select among multiple GPUs on a single screen and the Sync extension
@@ -371,6 +376,29 @@ The name of this extension is "DRI3"
 	For information on synchronization of buffer access between
 	the client and the X server, please see section 12.
 
+┌───
+    DRI3SyncobjFromFD
+	drawable: DRAWABLE
+	syncobj: DRI3SYNCOBJ
+	fd: FD
+└───
+	Errors: IDchoice, Drawable
+
+	Create an X11 object used to refer to a synchronization context.
+	Combined with a sequence number, it can refer to any task fence
+	in this context.
+
+┌───
+    DRI3FDFromSyncobj
+	drawable: DRAWABLE
+	syncobj: DRI3SYNCOBJ
+      ▶
+	fd: FD
+└───
+	Errors: IDchoice, Drawable, Match
+
+	Given a DRI3 Syncobj, get a file descriptor from server which
+	can be converted to back implementation.
 
 			     ❄ ❄ ❄  ❄  ❄ ❄ ❄
 
