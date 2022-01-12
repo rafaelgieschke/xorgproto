@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+    - master
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        mkdir -p artifacts
+        touch artifacts/.nojekyll
+        printf '<!doctype html><h1><a href="%s">%s</a></h1>\n' "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" >> artifacts/index.html
+        docker run -v "$PWD:/build" -w /build registry.gitlab.com/islandoftex/images/texlive:latest sh -euc '
+          mkdir -p artifacts
+          find specs -maxdepth 1 -name "*.txt" -exec cp {} artifacts ";"
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential automake pkg-config xutils-dev docbook xmlto fop xsltproc xorg-sgml-doctools asciidoc-base
+          ./autogen.sh
+          ./configure --enable-legacy --prefix="$PWD/artifacts"
+          make install
+          cd artifacts
+          for f in *.txt; do TZ=UTC asciidoc -o "${f%.*}.html" "$f"; done
+          find \( -name "*.html" -o -name "*.txt" \) -exec printf '\''<li><a href="%s">%s</a>\n'\'' {} {} \; >> index.html
+        '
+    - uses: JamesIves/github-pages-deploy-action@4.1.8
+      with:
+        branch: gh-pages
+        folder: artifacts
