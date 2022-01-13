@@ -1,0 +1,3927 @@
+%!PS-Adobe-3.0
+%%Creator: (Apache FOP Version 2.6)
+%%CreationDate: 2022-01-13T23:55:48
+%%LanguageLevel: 3
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%HiResBoundingBox: (atend)
+%%DocumentSuppliedResources: (atend)
+%%EndComments
+%%BeginDefaults
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Version: 1.2 0
+%%Copyright: (Copyright 2001-2003,2010 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (Basic set of procedures used by the XML Graphics project \(Batik and FOP\))
+/bd{bind def}bind def
+/ld{load def}bd
+/GR/grestore ld
+/GS/gsave ld
+/RM/rmoveto ld
+/C/curveto ld
+/t/show ld
+/L/lineto ld
+/ML/setmiterlimit ld
+/CT/concat ld
+/f/fill ld
+/N/newpath ld
+/S/stroke ld
+/CC/setcmykcolor ld
+/A/ashow ld
+/cp/closepath ld
+/RC/setrgbcolor ld
+/LJ/setlinejoin ld
+/GC/setgray ld
+/LW/setlinewidth ld
+/M/moveto ld
+/re {4 2 roll M
+1 index 0 rlineto
+0 exch rlineto
+neg 0 rlineto
+cp } bd
+/_ctm matrix def
+/_tm matrix def
+/BT { _ctm currentmatrix pop matrix _tm copy pop 0 0 moveto } bd
+/ET { _ctm setmatrix } bd
+/iTm { _ctm setmatrix _tm concat } bd
+/Tm { _tm astore pop iTm 0 0 moveto } bd
+/ux 0.0 def
+/uy 0.0 def
+/F {
+  /Tp exch def
+  /Tf exch def
+  Tf findfont Tp scalefont setfont
+  /cf Tf def  /cs Tp def
+} bd
+/ULS {currentpoint /uy exch def /ux exch def} bd
+/ULE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add moveto  Tcx uy To add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/OLE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add cs add moveto Tcx uy To add cs add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/SOE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add cs 10 mul 26 idiv add moveto Tcx uy To add cs 10 mul 26 idiv add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/QT {
+/Y22 exch store
+/X22 exch store
+/Y21 exch store
+/X21 exch store
+currentpoint
+/Y21 load 2 mul add 3 div exch
+/X21 load 2 mul add 3 div exch
+/X21 load 2 mul /X22 load add 3 div
+/Y21 load 2 mul /Y22 load add 3 div
+/X22 load /Y22 load curveto
+} bd
+/SSPD {
+dup length /d exch dict def
+{
+/v exch def
+/k exch def
+currentpagedevice k known {
+/cpdv currentpagedevice k get def
+v cpdv ne {
+/upd false def
+/nullv v type /nulltype eq def
+/nullcpdv cpdv type /nulltype eq def
+nullv nullcpdv or
+{
+/upd true def
+} {
+/sametype v type cpdv type eq def
+sametype {
+v type /arraytype eq {
+/vlen v length def
+/cpdvlen cpdv length def
+vlen cpdvlen eq {
+0 1 vlen 1 sub {
+/i exch def
+/obj v i get def
+/cpdobj cpdv i get def
+obj cpdobj ne {
+/upd true def
+exit
+} if
+} for
+} {
+/upd true def
+} ifelse
+} {
+v type /dicttype eq {
+v {
+/dv exch def
+/dk exch def
+/cpddv cpdv dk get def
+dv cpddv ne {
+/upd true def
+exit
+} if
+} forall
+} {
+/upd true def
+} ifelse
+} ifelse
+} if
+} ifelse
+upd true eq {
+d k v put
+} if
+} if
+} if
+} forall
+d length 0 gt {
+d setpagedevice
+} if
+} bd
+/RE { % /NewFontName [NewEncodingArray] /FontName RE -
+  findfont dup length dict begin
+  {
+    1 index /FID ne
+    {def} {pop pop} ifelse
+  } forall
+  /Encoding exch def
+  /FontName 1 index def
+  currentdict definefont pop
+  end
+} bind def
+%%EndResource
+%%BeginResource: procset (Apache XML Graphics EPS ProcSet) 1.0 0
+%%Version: 1.0 0
+%%Copyright: (Copyright 2002-2003 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (EPS procedures used by the Apache XML Graphics project \(Batik and FOP\))
+/BeginEPSF { %def
+/b4_Inc_state save def         % Save state for cleanup
+/dict_count countdictstack def % Count objects on dict stack
+/op_count count 1 sub def      % Count objects on operand stack
+userdict begin                 % Push userdict on dict stack
+/showpage { } def              % Redefine showpage, { } = null proc
+0 setgray 0 setlinecap         % Prepare graphics state
+1 setlinewidth 0 setlinejoin
+10 setmiterlimit [ ] 0 setdash newpath
+/languagelevel where           % If level not equal to 1 then
+{pop languagelevel             % set strokeadjust and
+1 ne                           % overprint to their defaults.
+{false setstrokeadjust false setoverprint
+} if
+} if
+} bd
+/EndEPSF { %def
+count op_count sub {pop} repeat            % Clean up stacks
+countdictstack dict_count sub {end} repeat
+b4_Inc_state restore
+} bd
+%%EndResource
+%%BeginResource: procset (Apache FOP Std ProcSet) 1.0 0
+%%Version: 1.0 0
+%%Copyright: (Copyright 2009 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (Basic set of procedures used by Apache FOP)
+/TJ { % Similar but not equal to PDF's TJ operator
+  {
+    dup type /stringtype eq
+    { show }
+    {
+      dup type /arraytype eq
+      { aload pop neg 1000 div exch 1000 div rmoveto }
+      { neg 1000 div 0 rmoveto }
+      ifelse
+    }
+    ifelse
+  } forall
+} bd
+/ATJ { % As TJ but adds letter-spacing
+  /ATJls exch def
+  {
+    dup type /stringtype eq
+    { ATJls 0 3 2 roll ashow }
+    { neg 1000 div 0 rmoveto }
+    ifelse
+  } forall
+} bd
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%FOPBeginFontDict
+%%IncludeResource: font Courier-Oblique
+%%IncludeResource: font Courier-BoldOblique
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font ZapfDingbats
+%%IncludeResource: font Symbol
+%%IncludeResource: font Helvetica
+%%IncludeResource: font Helvetica-Oblique
+%%IncludeResource: font Helvetica-Bold
+%%IncludeResource: font Helvetica-BoldOblique
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Times-Italic
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-BoldItalic
+%%IncludeResource: font Courier
+%FOPEndFontDict
+%%BeginResource: encoding WinAnsiEncoding
+/WinAnsiEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma
+/hyphen /period /slash /zero /one
+/two /three /four /five /six
+/seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at
+/A /B /C /D /E
+/F /G /H /I /J
+/K /L /M /N /O
+/P /Q /R /S /T
+/U /V /W /X /Y
+/Z /bracketleft /backslash /bracketright /asciicircum
+/underscore /quoteleft /a /b /c
+/d /e /f /g /h
+/i /j /k /l /m
+/n /o /p /q /r
+/s /t /u /v /w
+/x /y /z /braceleft /bar
+/braceright /asciitilde /bullet /Euro /bullet
+/quotesinglbase /florin /quotedblbase /ellipsis /dagger
+/daggerdbl /circumflex /perthousand /Scaron /guilsinglleft
+/OE /bullet /Zcaron /bullet /bullet
+/quoteleft /quoteright /quotedblleft /quotedblright /bullet
+/endash /emdash /asciitilde /trademark /scaron
+/guilsinglright /oe /bullet /zcaron /Ydieresis
+/space /exclamdown /cent /sterling /currency
+/yen /brokenbar /section /dieresis /copyright
+/ordfeminine /guillemotleft /logicalnot /sfthyphen /registered
+/macron /degree /plusminus /twosuperior /threesuperior
+/acute /mu /paragraph /middot /cedilla
+/onesuperior /ordmasculine /guillemotright /onequarter /onehalf
+/threequarters /questiondown /Agrave /Aacute /Acircumflex
+/Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave
+/Iacute /Icircumflex /Idieresis /Eth /Ntilde
+/Ograve /Oacute /Ocircumflex /Otilde /Odieresis
+/multiply /Oslash /Ugrave /Uacute /Ucircumflex
+/Udieresis /Yacute /Thorn /germandbls /agrave
+/aacute /acircumflex /atilde /adieresis /aring
+/ae /ccedilla /egrave /eacute /ecircumflex
+/edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex
+/otilde /odieresis /divide /oslash /ugrave
+/uacute /ucircumflex /udieresis /yacute /thorn
+/ydieresis
+] def
+%%EndResource
+%FOPBeginFontReencode
+/Courier-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-Oblique exch definefont pop
+/Courier-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-BoldOblique exch definefont pop
+/Courier-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-Bold exch definefont pop
+/Helvetica findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica exch definefont pop
+/Helvetica-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-Oblique exch definefont pop
+/Helvetica-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-Bold exch definefont pop
+/Helvetica-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-BoldOblique exch definefont pop
+/Times-Roman findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Roman exch definefont pop
+/Times-Italic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Italic exch definefont pop
+/Times-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Bold exch definefont pop
+/Times-BoldItalic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-BoldItalic exch definefont pop
+/Courier findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier exch definefont pop
+%FOPEndFontReencode
+%%EndSetup
+%%Page: i 1
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: titlepage-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 104.674 21.287 Tm
+(Colormap Utilization) t
+1 0 0 -1 100.495 51.146 Tm
+(Policy and Extension) t
+/Helvetica-Bold 20.736 F
+1 0 0 -1 102.917 93.009 Tm
+(X Project Team Standard) t
+/Helvetica-Bold 12 F
+1 0 0 -1 126.277 254.419 Tm
+(Kaleb S. Keithley, The Open Group) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: ii 2
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: titlepage-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 14.4 F
+1 0 0 -1 0 12.319 Tm
+[(Colormap ) -1199 (Utilization ) -1199 (Policy ) -1199 (and ) -1199 (Extension: ) -1199 (X ) -1199 (Project ) -1199 (Team ) -1199 (Stan-)] TJ
+1 0 0 -1 0 29.599 Tm
+(dard) t
+/Times-Roman 10 F
+1 0 0 -1 0 42.89 Tm
+(by Kaleb S. Keithley) t
+1 0 0 -1 0 59.89 Tm
+(X Version 11, Release 7.7) t
+1 0 0 -1 0 76.89 Tm
+(Version 1.0) t
+1 0 0 -1 0 88.89 Tm
+(Copyright ) t
+1 0 0 -1 43.06 88.89 Tm
+(\251) t
+1 0 0 -1 50.66 88.89 Tm
+( 1986-1997 The Open Group) t
+/Times-Roman 8 F
+1 0 0 -1 0 107.224 Tm
+[(Permission ) 368 (is ) 368 (hereby ) 368 (granted, ) 368 (free ) 368 (of ) 368 (charge, ) 368 (to ) 368 (any ) 368 (person ) 368 (obtaining ) 368 (a ) 368 (copy ) 368 (of ) 368 (this ) 368 (software ) 368 
+(and ) 368 (associated ) 368 (documentation ) 368 (files ) 368 (\(the ) 368 (Software\),)] TJ
+1 0 0 -1 0 116.824 Tm
+[(to ) 14 (use ) 14 (the ) 14 (Software ) 14 (without ) 14 (restriction, ) 14 (including, ) 14 (without ) 14 (limitation, ) 14 (the ) 14 (rights ) 14 (to ) 14 (copy, ) 14 (modify, ) 14 (merge, ) 14 
+(publish, ) 14 (distribute ) 14 (and ) 14 (sublicense ) 14 (the)] TJ
+1 0 0 -1 0 126.424 Tm
+[(Software, ) -402 (to ) -402 (make, ) -402 (have ) -402 (made, ) -402 (license ) -402 (and ) -402 (distribute ) -402 (derivative ) -402 (works ) -402 (thereof, ) -402 (and ) -402 (to ) -402 (permit ) -402 
+(persons ) -402 (to ) -402 (whom ) -402 (the ) -402 (Software ) -402 (is ) -402 (furnished ) -402 (to)] TJ
+1 0 0 -1 0 136.024 Tm
+(do so, subject to the following conditions:) t
+1 0 0 -1 0 153.624 Tm
+(The above copyright notice and the following permission notice shall be included in all copies of the Software:) t
+1 0 0 -1 0 171.224 Tm
+[(THE ) 319 (SOFTWARE ) 319 (IS ) 319 (PROVIDED ) 319 (\223AS ) 319 (IS\224, ) 319 (WITHOUT ) 319 (WARRANTY ) 319 (OF ) 319 (ANY ) 319 (KIND, ) 319 (EXPRESS ) 319 (OR ) 319 (IMPLIED, ) 319 (INCLUDING, ) 319 
+(BUT ) 319 (NOT)] TJ
+1 0 0 -1 0 180.824 Tm
+[(LIMITED ) -544 (TO, ) -544 (THE ) -544 (WARRANTIES ) -544 (OF ) -544 (MERCHANTABILITY, ) -544 (FITNESS ) -544 (FOR ) -544 (A ) -544 (PARTICULAR ) -544 (PURPOSE ) -544 (AND ) -544 (NON- ) -544 
+(INFRINGE-)] TJ
+1 0 0 -1 0 190.424 Tm
+[(MENT. ) 13 (IN ) 13 (NO ) 13 (EVENT ) 13 (SHALL ) 13 (THE ) 13 (OPEN ) 13 (GROUP ) 13 (BE ) 13 (LIABLE ) 13 (FOR ) 13 (ANY ) 13 (CLAIM, ) 13 (DAMAGES ) 13 (OR ) 13 (OTHER ) 13 (LIABILITY, ) 13 
+(WHETHER)] TJ
+1 0 0 -1 0 200.024 Tm
+[(IN ) 314 (AN ) 314 (ACTION ) 314 (OF ) 314 (CONTRACT, ) 314 (TORT ) 314 (OR ) 314 (OTHERWISE, ) 314 (ARISING ) 314 (FROM, ) 314 (OUT ) 314 (OF, ) 314 (OR ) 314 (IN ) 314 (CONNECTION ) 314 (WITH ) 314 
+(THE ) 314 (SOFTWARE)] TJ
+1 0 0 -1 0 209.624 Tm
+(OR THE USE OF OTHER DEALINGS IN THE SOFTWARE.) t
+1 0 0 -1 0 227.224 Tm
+[(Except ) -578 (as ) -578 (contained ) -578 (in ) -578 (this ) -578 (notice, ) -578 (the ) -578 (name ) -578 (of ) -578 (The ) -578 (Open ) -578 (Group ) -578 (shall ) -578 (not ) -578 (be ) -578 
+(used ) -578 (in ) -578 (advertising ) -578 (or ) -578 (otherwise ) -578 (to ) -578 (promote ) -578 (the ) -578 (use ) -578 (or ) -578 (other)] TJ
+1 0 0 -1 0 236.824 Tm
+(dealings in this Software without prior written authorization from The Open Group.) t
+1 0 0 -1 0 254.424 Tm
+(X Window System is a trademark of The Open Group.) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: iii 3
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: lot-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 17.28 F
+1 0 0 -1 0 14.783 Tm
+(Table of Contents) t
+/Times-Roman 10 F
+1 0 0 -1 48 37.706 Tm
+[(1. ) -1142 (Overview)] TJ
+1 0 0 -1 101.572 37.706 Tm
+(.) t
+1 0 0 -1 104.572 37.706 Tm
+(.) t
+1 0 0 -1 107.572 37.706 Tm
+(.) t
+1 0 0 -1 110.572 37.706 Tm
+(.) t
+1 0 0 -1 113.572 37.706 Tm
+(.) t
+1 0 0 -1 116.572 37.706 Tm
+(.) t
+1 0 0 -1 119.572 37.706 Tm
+(.) t
+1 0 0 -1 122.572 37.706 Tm
+(.) t
+1 0 0 -1 125.572 37.706 Tm
+(.) t
+1 0 0 -1 128.572 37.706 Tm
+(.) t
+1 0 0 -1 131.572 37.706 Tm
+(.) t
+1 0 0 -1 134.572 37.706 Tm
+(.) t
+1 0 0 -1 137.572 37.706 Tm
+(.) t
+1 0 0 -1 140.572 37.706 Tm
+(.) t
+1 0 0 -1 143.572 37.706 Tm
+(.) t
+1 0 0 -1 146.572 37.706 Tm
+(.) t
+1 0 0 -1 149.572 37.706 Tm
+(.) t
+1 0 0 -1 152.572 37.706 Tm
+(.) t
+1 0 0 -1 155.572 37.706 Tm
+(.) t
+1 0 0 -1 158.572 37.706 Tm
+(.) t
+1 0 0 -1 161.572 37.706 Tm
+(.) t
+1 0 0 -1 164.572 37.706 Tm
+(.) t
+1 0 0 -1 167.572 37.706 Tm
+(.) t
+1 0 0 -1 170.572 37.706 Tm
+(.) t
+1 0 0 -1 173.572 37.706 Tm
+(.) t
+1 0 0 -1 176.572 37.706 Tm
+(.) t
+1 0 0 -1 179.572 37.706 Tm
+(.) t
+1 0 0 -1 182.572 37.706 Tm
+(.) t
+1 0 0 -1 185.572 37.706 Tm
+(.) t
+1 0 0 -1 188.572 37.706 Tm
+(.) t
+1 0 0 -1 191.572 37.706 Tm
+(.) t
+1 0 0 -1 194.572 37.706 Tm
+(.) t
+1 0 0 -1 197.572 37.706 Tm
+(.) t
+1 0 0 -1 200.572 37.706 Tm
+(.) t
+1 0 0 -1 203.572 37.706 Tm
+(.) t
+1 0 0 -1 206.572 37.706 Tm
+(.) t
+1 0 0 -1 209.572 37.706 Tm
+(.) t
+1 0 0 -1 212.572 37.706 Tm
+(.) t
+1 0 0 -1 215.572 37.706 Tm
+(.) t
+1 0 0 -1 218.572 37.706 Tm
+(.) t
+1 0 0 -1 221.572 37.706 Tm
+(.) t
+1 0 0 -1 224.572 37.706 Tm
+(.) t
+1 0 0 -1 227.572 37.706 Tm
+(.) t
+1 0 0 -1 230.572 37.706 Tm
+(.) t
+1 0 0 -1 233.572 37.706 Tm
+(.) t
+1 0 0 -1 236.572 37.706 Tm
+(.) t
+1 0 0 -1 239.572 37.706 Tm
+(.) t
+1 0 0 -1 242.572 37.706 Tm
+(.) t
+1 0 0 -1 245.572 37.706 Tm
+(.) t
+1 0 0 -1 248.572 37.706 Tm
+(.) t
+1 0 0 -1 251.572 37.706 Tm
+(.) t
+1 0 0 -1 254.572 37.706 Tm
+(.) t
+1 0 0 -1 257.572 37.706 Tm
+(.) t
+1 0 0 -1 260.572 37.706 Tm
+(.) t
+1 0 0 -1 263.572 37.706 Tm
+(.) t
+1 0 0 -1 266.572 37.706 Tm
+(.) t
+1 0 0 -1 269.572 37.706 Tm
+(.) t
+1 0 0 -1 272.572 37.706 Tm
+(.) t
+1 0 0 -1 275.572 37.706 Tm
+(.) t
+1 0 0 -1 278.572 37.706 Tm
+(.) t
+1 0 0 -1 281.572 37.706 Tm
+(.) t
+1 0 0 -1 284.572 37.706 Tm
+(.) t
+1 0 0 -1 287.572 37.706 Tm
+(.) t
+1 0 0 -1 290.572 37.706 Tm
+(.) t
+1 0 0 -1 293.572 37.706 Tm
+(.) t
+1 0 0 -1 296.572 37.706 Tm
+(.) t
+1 0 0 -1 299.572 37.706 Tm
+(.) t
+1 0 0 -1 302.572 37.706 Tm
+(.) t
+1 0 0 -1 305.572 37.706 Tm
+(.) t
+1 0 0 -1 308.572 37.706 Tm
+(.) t
+1 0 0 -1 311.572 37.706 Tm
+(.) t
+1 0 0 -1 314.572 37.706 Tm
+(.) t
+1 0 0 -1 317.572 37.706 Tm
+(.) t
+1 0 0 -1 320.572 37.706 Tm
+(.) t
+1 0 0 -1 323.572 37.706 Tm
+(.) t
+1 0 0 -1 326.572 37.706 Tm
+(.) t
+1 0 0 -1 329.572 37.706 Tm
+(.) t
+1 0 0 -1 332.572 37.706 Tm
+(.) t
+1 0 0 -1 335.572 37.706 Tm
+(.) t
+1 0 0 -1 338.572 37.706 Tm
+(.) t
+1 0 0 -1 341.572 37.706 Tm
+(.) t
+1 0 0 -1 344.572 37.706 Tm
+(.) t
+1 0 0 -1 347.572 37.706 Tm
+(.) t
+1 0 0 -1 350.572 37.706 Tm
+(.) t
+1 0 0 -1 353.572 37.706 Tm
+(.) t
+1 0 0 -1 356.572 37.706 Tm
+(.) t
+1 0 0 -1 359.572 37.706 Tm
+(.) t
+1 0 0 -1 362.572 37.706 Tm
+(.) t
+1 0 0 -1 365.572 37.706 Tm
+(.) t
+1 0 0 -1 368.572 37.706 Tm
+(.) t
+1 0 0 -1 371.572 37.706 Tm
+(.) t
+1 0 0 -1 374.572 37.706 Tm
+(.) t
+1 0 0 -1 377.572 37.706 Tm
+(.) t
+1 0 0 -1 380.572 37.706 Tm
+(.) t
+1 0 0 -1 383.572 37.706 Tm
+(.) t
+1 0 0 -1 386.572 37.706 Tm
+(.) t
+1 0 0 -1 389.572 37.706 Tm
+(.) t
+1 0 0 -1 392.572 37.706 Tm
+(.) t
+1 0 0 -1 395.572 37.706 Tm
+(.) t
+1 0 0 -1 398.572 37.706 Tm
+(.) t
+1 0 0 -1 401.572 37.706 Tm
+(.) t
+1 0 0 -1 404.572 37.706 Tm
+(.) t
+1 0 0 -1 407.572 37.706 Tm
+(.) t
+1 0 0 -1 410.572 37.706 Tm
+(.) t
+1 0 0 -1 413.572 37.706 Tm
+(.) t
+1 0 0 -1 416.572 37.706 Tm
+(.) t
+1 0 0 -1 419.572 37.706 Tm
+(.) t
+1 0 0 -1 422.572 37.706 Tm
+(.) t
+1 0 0 -1 425.572 37.706 Tm
+(.) t
+1 0 0 -1 428.572 37.706 Tm
+(.) t
+1 0 0 -1 431.572 37.706 Tm
+(.) t
+1 0 0 -1 434.572 37.706 Tm
+(.) t
+1 0 0 -1 437.572 37.706 Tm
+(.) t
+1 0 0 -1 446.273 37.706 Tm
+(1) t
+1 0 0 -1 48 49.706 Tm
+[(2. ) -1153 (Requests)] TJ
+1 0 0 -1 98.263 49.706 Tm
+(.) t
+1 0 0 -1 101.263 49.706 Tm
+(.) t
+1 0 0 -1 104.263 49.706 Tm
+(.) t
+1 0 0 -1 107.263 49.706 Tm
+(.) t
+1 0 0 -1 110.263 49.706 Tm
+(.) t
+1 0 0 -1 113.263 49.706 Tm
+(.) t
+1 0 0 -1 116.263 49.706 Tm
+(.) t
+1 0 0 -1 119.263 49.706 Tm
+(.) t
+1 0 0 -1 122.263 49.706 Tm
+(.) t
+1 0 0 -1 125.263 49.706 Tm
+(.) t
+1 0 0 -1 128.263 49.706 Tm
+(.) t
+1 0 0 -1 131.263 49.706 Tm
+(.) t
+1 0 0 -1 134.263 49.706 Tm
+(.) t
+1 0 0 -1 137.263 49.706 Tm
+(.) t
+1 0 0 -1 140.263 49.706 Tm
+(.) t
+1 0 0 -1 143.263 49.706 Tm
+(.) t
+1 0 0 -1 146.263 49.706 Tm
+(.) t
+1 0 0 -1 149.263 49.706 Tm
+(.) t
+1 0 0 -1 152.263 49.706 Tm
+(.) t
+1 0 0 -1 155.263 49.706 Tm
+(.) t
+1 0 0 -1 158.263 49.706 Tm
+(.) t
+1 0 0 -1 161.263 49.706 Tm
+(.) t
+1 0 0 -1 164.263 49.706 Tm
+(.) t
+1 0 0 -1 167.263 49.706 Tm
+(.) t
+1 0 0 -1 170.263 49.706 Tm
+(.) t
+1 0 0 -1 173.263 49.706 Tm
+(.) t
+1 0 0 -1 176.263 49.706 Tm
+(.) t
+1 0 0 -1 179.263 49.706 Tm
+(.) t
+1 0 0 -1 182.263 49.706 Tm
+(.) t
+1 0 0 -1 185.263 49.706 Tm
+(.) t
+1 0 0 -1 188.263 49.706 Tm
+(.) t
+1 0 0 -1 191.263 49.706 Tm
+(.) t
+1 0 0 -1 194.263 49.706 Tm
+(.) t
+1 0 0 -1 197.263 49.706 Tm
+(.) t
+1 0 0 -1 200.263 49.706 Tm
+(.) t
+1 0 0 -1 203.263 49.706 Tm
+(.) t
+1 0 0 -1 206.263 49.706 Tm
+(.) t
+1 0 0 -1 209.263 49.706 Tm
+(.) t
+1 0 0 -1 212.263 49.706 Tm
+(.) t
+1 0 0 -1 215.263 49.706 Tm
+(.) t
+1 0 0 -1 218.263 49.706 Tm
+(.) t
+1 0 0 -1 221.263 49.706 Tm
+(.) t
+1 0 0 -1 224.263 49.706 Tm
+(.) t
+1 0 0 -1 227.263 49.706 Tm
+(.) t
+1 0 0 -1 230.263 49.706 Tm
+(.) t
+1 0 0 -1 233.263 49.706 Tm
+(.) t
+1 0 0 -1 236.263 49.706 Tm
+(.) t
+1 0 0 -1 239.263 49.706 Tm
+(.) t
+1 0 0 -1 242.263 49.706 Tm
+(.) t
+1 0 0 -1 245.263 49.706 Tm
+(.) t
+1 0 0 -1 248.263 49.706 Tm
+(.) t
+1 0 0 -1 251.263 49.706 Tm
+(.) t
+1 0 0 -1 254.263 49.706 Tm
+(.) t
+1 0 0 -1 257.263 49.706 Tm
+(.) t
+1 0 0 -1 260.263 49.706 Tm
+(.) t
+1 0 0 -1 263.263 49.706 Tm
+(.) t
+1 0 0 -1 266.263 49.706 Tm
+(.) t
+1 0 0 -1 269.263 49.706 Tm
+(.) t
+1 0 0 -1 272.263 49.706 Tm
+(.) t
+1 0 0 -1 275.263 49.706 Tm
+(.) t
+1 0 0 -1 278.263 49.706 Tm
+(.) t
+1 0 0 -1 281.263 49.706 Tm
+(.) t
+1 0 0 -1 284.263 49.706 Tm
+(.) t
+1 0 0 -1 287.263 49.706 Tm
+(.) t
+1 0 0 -1 290.263 49.706 Tm
+(.) t
+1 0 0 -1 293.263 49.706 Tm
+(.) t
+1 0 0 -1 296.263 49.706 Tm
+(.) t
+1 0 0 -1 299.263 49.706 Tm
+(.) t
+1 0 0 -1 302.263 49.706 Tm
+(.) t
+1 0 0 -1 305.263 49.706 Tm
+(.) t
+1 0 0 -1 308.263 49.706 Tm
+(.) t
+1 0 0 -1 311.263 49.706 Tm
+(.) t
+1 0 0 -1 314.263 49.706 Tm
+(.) t
+1 0 0 -1 317.263 49.706 Tm
+(.) t
+1 0 0 -1 320.263 49.706 Tm
+(.) t
+1 0 0 -1 323.263 49.706 Tm
+(.) t
+1 0 0 -1 326.263 49.706 Tm
+(.) t
+1 0 0 -1 329.263 49.706 Tm
+(.) t
+1 0 0 -1 332.263 49.706 Tm
+(.) t
+1 0 0 -1 335.263 49.706 Tm
+(.) t
+1 0 0 -1 338.263 49.706 Tm
+(.) t
+1 0 0 -1 341.263 49.706 Tm
+(.) t
+1 0 0 -1 344.263 49.706 Tm
+(.) t
+1 0 0 -1 347.263 49.706 Tm
+(.) t
+1 0 0 -1 350.263 49.706 Tm
+(.) t
+1 0 0 -1 353.263 49.706 Tm
+(.) t
+1 0 0 -1 356.263 49.706 Tm
+(.) t
+1 0 0 -1 359.263 49.706 Tm
+(.) t
+1 0 0 -1 362.263 49.706 Tm
+(.) t
+1 0 0 -1 365.263 49.706 Tm
+(.) t
+1 0 0 -1 368.263 49.706 Tm
+(.) t
+1 0 0 -1 371.263 49.706 Tm
+(.) t
+1 0 0 -1 374.263 49.706 Tm
+(.) t
+1 0 0 -1 377.263 49.706 Tm
+(.) t
+1 0 0 -1 380.263 49.706 Tm
+(.) t
+1 0 0 -1 383.263 49.706 Tm
+(.) t
+1 0 0 -1 386.263 49.706 Tm
+(.) t
+1 0 0 -1 389.263 49.706 Tm
+(.) t
+1 0 0 -1 392.263 49.706 Tm
+(.) t
+1 0 0 -1 395.263 49.706 Tm
+(.) t
+1 0 0 -1 398.263 49.706 Tm
+(.) t
+1 0 0 -1 401.263 49.706 Tm
+(.) t
+1 0 0 -1 404.263 49.706 Tm
+(.) t
+1 0 0 -1 407.263 49.706 Tm
+(.) t
+1 0 0 -1 410.263 49.706 Tm
+(.) t
+1 0 0 -1 413.263 49.706 Tm
+(.) t
+1 0 0 -1 416.263 49.706 Tm
+(.) t
+1 0 0 -1 419.263 49.706 Tm
+(.) t
+1 0 0 -1 422.263 49.706 Tm
+(.) t
+1 0 0 -1 425.263 49.706 Tm
+(.) t
+1 0 0 -1 428.263 49.706 Tm
+(.) t
+1 0 0 -1 431.263 49.706 Tm
+(.) t
+1 0 0 -1 434.263 49.706 Tm
+(.) t
+1 0 0 -1 437.263 49.706 Tm
+(.) t
+1 0 0 -1 440.263 49.706 Tm
+(.) t
+1 0 0 -1 446.273 49.706 Tm
+(2) t
+1 0 0 -1 48 61.706 Tm
+[(3. ) -1025 (Events ) -1025 (and ) -1025 (Errors)] TJ
+1 0 0 -1 135.727 61.706 Tm
+(.) t
+1 0 0 -1 138.727 61.706 Tm
+(.) t
+1 0 0 -1 141.727 61.706 Tm
+(.) t
+1 0 0 -1 144.727 61.706 Tm
+(.) t
+1 0 0 -1 147.727 61.706 Tm
+(.) t
+1 0 0 -1 150.727 61.706 Tm
+(.) t
+1 0 0 -1 153.727 61.706 Tm
+(.) t
+1 0 0 -1 156.727 61.706 Tm
+(.) t
+1 0 0 -1 159.727 61.706 Tm
+(.) t
+1 0 0 -1 162.727 61.706 Tm
+(.) t
+1 0 0 -1 165.727 61.706 Tm
+(.) t
+1 0 0 -1 168.727 61.706 Tm
+(.) t
+1 0 0 -1 171.727 61.706 Tm
+(.) t
+1 0 0 -1 174.727 61.706 Tm
+(.) t
+1 0 0 -1 177.727 61.706 Tm
+(.) t
+1 0 0 -1 180.727 61.706 Tm
+(.) t
+1 0 0 -1 183.727 61.706 Tm
+(.) t
+1 0 0 -1 186.727 61.706 Tm
+(.) t
+1 0 0 -1 189.727 61.706 Tm
+(.) t
+1 0 0 -1 192.727 61.706 Tm
+(.) t
+1 0 0 -1 195.727 61.706 Tm
+(.) t
+1 0 0 -1 198.727 61.706 Tm
+(.) t
+1 0 0 -1 201.727 61.706 Tm
+(.) t
+1 0 0 -1 204.727 61.706 Tm
+(.) t
+1 0 0 -1 207.727 61.706 Tm
+(.) t
+1 0 0 -1 210.727 61.706 Tm
+(.) t
+1 0 0 -1 213.727 61.706 Tm
+(.) t
+1 0 0 -1 216.727 61.706 Tm
+(.) t
+1 0 0 -1 219.727 61.706 Tm
+(.) t
+1 0 0 -1 222.727 61.706 Tm
+(.) t
+1 0 0 -1 225.727 61.706 Tm
+(.) t
+1 0 0 -1 228.727 61.706 Tm
+(.) t
+1 0 0 -1 231.727 61.706 Tm
+(.) t
+1 0 0 -1 234.727 61.706 Tm
+(.) t
+1 0 0 -1 237.727 61.706 Tm
+(.) t
+1 0 0 -1 240.727 61.706 Tm
+(.) t
+1 0 0 -1 243.727 61.706 Tm
+(.) t
+1 0 0 -1 246.727 61.706 Tm
+(.) t
+1 0 0 -1 249.727 61.706 Tm
+(.) t
+1 0 0 -1 252.727 61.706 Tm
+(.) t
+1 0 0 -1 255.727 61.706 Tm
+(.) t
+1 0 0 -1 258.727 61.706 Tm
+(.) t
+1 0 0 -1 261.727 61.706 Tm
+(.) t
+1 0 0 -1 264.727 61.706 Tm
+(.) t
+1 0 0 -1 267.727 61.706 Tm
+(.) t
+1 0 0 -1 270.727 61.706 Tm
+(.) t
+1 0 0 -1 273.727 61.706 Tm
+(.) t
+1 0 0 -1 276.727 61.706 Tm
+(.) t
+1 0 0 -1 279.727 61.706 Tm
+(.) t
+1 0 0 -1 282.727 61.706 Tm
+(.) t
+1 0 0 -1 285.727 61.706 Tm
+(.) t
+1 0 0 -1 288.727 61.706 Tm
+(.) t
+1 0 0 -1 291.727 61.706 Tm
+(.) t
+1 0 0 -1 294.727 61.706 Tm
+(.) t
+1 0 0 -1 297.727 61.706 Tm
+(.) t
+1 0 0 -1 300.727 61.706 Tm
+(.) t
+1 0 0 -1 303.727 61.706 Tm
+(.) t
+1 0 0 -1 306.727 61.706 Tm
+(.) t
+1 0 0 -1 309.727 61.706 Tm
+(.) t
+1 0 0 -1 312.727 61.706 Tm
+(.) t
+1 0 0 -1 315.727 61.706 Tm
+(.) t
+1 0 0 -1 318.727 61.706 Tm
+(.) t
+1 0 0 -1 321.727 61.706 Tm
+(.) t
+1 0 0 -1 324.727 61.706 Tm
+(.) t
+1 0 0 -1 327.727 61.706 Tm
+(.) t
+1 0 0 -1 330.727 61.706 Tm
+(.) t
+1 0 0 -1 333.727 61.706 Tm
+(.) t
+1 0 0 -1 336.727 61.706 Tm
+(.) t
+1 0 0 -1 339.727 61.706 Tm
+(.) t
+1 0 0 -1 342.727 61.706 Tm
+(.) t
+1 0 0 -1 345.727 61.706 Tm
+(.) t
+1 0 0 -1 348.727 61.706 Tm
+(.) t
+1 0 0 -1 351.727 61.706 Tm
+(.) t
+1 0 0 -1 354.727 61.706 Tm
+(.) t
+1 0 0 -1 357.727 61.706 Tm
+(.) t
+1 0 0 -1 360.727 61.706 Tm
+(.) t
+1 0 0 -1 363.727 61.706 Tm
+(.) t
+1 0 0 -1 366.727 61.706 Tm
+(.) t
+1 0 0 -1 369.727 61.706 Tm
+(.) t
+1 0 0 -1 372.727 61.706 Tm
+(.) t
+1 0 0 -1 375.727 61.706 Tm
+(.) t
+1 0 0 -1 378.727 61.706 Tm
+(.) t
+1 0 0 -1 381.727 61.706 Tm
+(.) t
+1 0 0 -1 384.727 61.706 Tm
+(.) t
+1 0 0 -1 387.727 61.706 Tm
+(.) t
+1 0 0 -1 390.727 61.706 Tm
+(.) t
+1 0 0 -1 393.727 61.706 Tm
+(.) t
+1 0 0 -1 396.727 61.706 Tm
+(.) t
+1 0 0 -1 399.727 61.706 Tm
+(.) t
+1 0 0 -1 402.727 61.706 Tm
+(.) t
+1 0 0 -1 405.727 61.706 Tm
+(.) t
+1 0 0 -1 408.727 61.706 Tm
+(.) t
+1 0 0 -1 411.727 61.706 Tm
+(.) t
+1 0 0 -1 414.727 61.706 Tm
+(.) t
+1 0 0 -1 417.727 61.706 Tm
+(.) t
+1 0 0 -1 420.727 61.706 Tm
+(.) t
+1 0 0 -1 423.727 61.706 Tm
+(.) t
+1 0 0 -1 426.727 61.706 Tm
+(.) t
+1 0 0 -1 429.727 61.706 Tm
+(.) t
+1 0 0 -1 432.727 61.706 Tm
+(.) t
+1 0 0 -1 435.727 61.706 Tm
+(.) t
+1 0 0 -1 438.727 61.706 Tm
+(.) t
+1 0 0 -1 446.272 61.706 Tm
+(3) t
+1 0 0 -1 48 73.706 Tm
+[(4. ) -869 (Changes ) -869 (to ) -869 (existing ) -869 (protocol.)] TJ
+1 0 0 -1 181.699 73.706 Tm
+(.) t
+1 0 0 -1 184.699 73.706 Tm
+(.) t
+1 0 0 -1 187.699 73.706 Tm
+(.) t
+1 0 0 -1 190.699 73.706 Tm
+(.) t
+1 0 0 -1 193.699 73.706 Tm
+(.) t
+1 0 0 -1 196.699 73.706 Tm
+(.) t
+1 0 0 -1 199.699 73.706 Tm
+(.) t
+1 0 0 -1 202.699 73.706 Tm
+(.) t
+1 0 0 -1 205.699 73.706 Tm
+(.) t
+1 0 0 -1 208.699 73.706 Tm
+(.) t
+1 0 0 -1 211.699 73.706 Tm
+(.) t
+1 0 0 -1 214.699 73.706 Tm
+(.) t
+1 0 0 -1 217.699 73.706 Tm
+(.) t
+1 0 0 -1 220.699 73.706 Tm
+(.) t
+1 0 0 -1 223.699 73.706 Tm
+(.) t
+1 0 0 -1 226.699 73.706 Tm
+(.) t
+1 0 0 -1 229.699 73.706 Tm
+(.) t
+1 0 0 -1 232.699 73.706 Tm
+(.) t
+1 0 0 -1 235.699 73.706 Tm
+(.) t
+1 0 0 -1 238.699 73.706 Tm
+(.) t
+1 0 0 -1 241.699 73.706 Tm
+(.) t
+1 0 0 -1 244.699 73.706 Tm
+(.) t
+1 0 0 -1 247.699 73.706 Tm
+(.) t
+1 0 0 -1 250.699 73.706 Tm
+(.) t
+1 0 0 -1 253.699 73.706 Tm
+(.) t
+1 0 0 -1 256.699 73.706 Tm
+(.) t
+1 0 0 -1 259.699 73.706 Tm
+(.) t
+1 0 0 -1 262.699 73.706 Tm
+(.) t
+1 0 0 -1 265.699 73.706 Tm
+(.) t
+1 0 0 -1 268.699 73.706 Tm
+(.) t
+1 0 0 -1 271.699 73.706 Tm
+(.) t
+1 0 0 -1 274.699 73.706 Tm
+(.) t
+1 0 0 -1 277.699 73.706 Tm
+(.) t
+1 0 0 -1 280.699 73.706 Tm
+(.) t
+1 0 0 -1 283.699 73.706 Tm
+(.) t
+1 0 0 -1 286.699 73.706 Tm
+(.) t
+1 0 0 -1 289.699 73.706 Tm
+(.) t
+1 0 0 -1 292.699 73.706 Tm
+(.) t
+1 0 0 -1 295.699 73.706 Tm
+(.) t
+1 0 0 -1 298.699 73.706 Tm
+(.) t
+1 0 0 -1 301.699 73.706 Tm
+(.) t
+1 0 0 -1 304.699 73.706 Tm
+(.) t
+1 0 0 -1 307.699 73.706 Tm
+(.) t
+1 0 0 -1 310.699 73.706 Tm
+(.) t
+1 0 0 -1 313.699 73.706 Tm
+(.) t
+1 0 0 -1 316.699 73.706 Tm
+(.) t
+1 0 0 -1 319.699 73.706 Tm
+(.) t
+1 0 0 -1 322.699 73.706 Tm
+(.) t
+1 0 0 -1 325.699 73.706 Tm
+(.) t
+1 0 0 -1 328.699 73.706 Tm
+(.) t
+1 0 0 -1 331.699 73.706 Tm
+(.) t
+1 0 0 -1 334.699 73.706 Tm
+(.) t
+1 0 0 -1 337.699 73.706 Tm
+(.) t
+1 0 0 -1 340.699 73.706 Tm
+(.) t
+1 0 0 -1 343.699 73.706 Tm
+(.) t
+1 0 0 -1 346.699 73.706 Tm
+(.) t
+1 0 0 -1 349.699 73.706 Tm
+(.) t
+1 0 0 -1 352.699 73.706 Tm
+(.) t
+1 0 0 -1 355.699 73.706 Tm
+(.) t
+1 0 0 -1 358.699 73.706 Tm
+(.) t
+1 0 0 -1 361.699 73.706 Tm
+(.) t
+1 0 0 -1 364.699 73.706 Tm
+(.) t
+1 0 0 -1 367.699 73.706 Tm
+(.) t
+1 0 0 -1 370.699 73.706 Tm
+(.) t
+1 0 0 -1 373.699 73.706 Tm
+(.) t
+1 0 0 -1 376.699 73.706 Tm
+(.) t
+1 0 0 -1 379.699 73.706 Tm
+(.) t
+1 0 0 -1 382.699 73.706 Tm
+(.) t
+1 0 0 -1 385.699 73.706 Tm
+(.) t
+1 0 0 -1 388.699 73.706 Tm
+(.) t
+1 0 0 -1 391.699 73.706 Tm
+(.) t
+1 0 0 -1 394.699 73.706 Tm
+(.) t
+1 0 0 -1 397.699 73.706 Tm
+(.) t
+1 0 0 -1 400.699 73.706 Tm
+(.) t
+1 0 0 -1 403.699 73.706 Tm
+(.) t
+1 0 0 -1 406.699 73.706 Tm
+(.) t
+1 0 0 -1 409.699 73.706 Tm
+(.) t
+1 0 0 -1 412.699 73.706 Tm
+(.) t
+1 0 0 -1 415.699 73.706 Tm
+(.) t
+1 0 0 -1 418.699 73.706 Tm
+(.) t
+1 0 0 -1 421.699 73.706 Tm
+(.) t
+1 0 0 -1 424.699 73.706 Tm
+(.) t
+1 0 0 -1 427.699 73.706 Tm
+(.) t
+1 0 0 -1 430.699 73.706 Tm
+(.) t
+1 0 0 -1 433.699 73.706 Tm
+(.) t
+1 0 0 -1 436.699 73.706 Tm
+(.) t
+1 0 0 -1 439.699 73.706 Tm
+(.) t
+1 0 0 -1 446.273 73.706 Tm
+(4) t
+1 0 0 -1 48 85.706 Tm
+[(5. ) -1145 (Encoding)] TJ
+1 0 0 -1 100.475 85.706 Tm
+(.) t
+1 0 0 -1 103.475 85.706 Tm
+(.) t
+1 0 0 -1 106.475 85.706 Tm
+(.) t
+1 0 0 -1 109.475 85.706 Tm
+(.) t
+1 0 0 -1 112.475 85.706 Tm
+(.) t
+1 0 0 -1 115.475 85.706 Tm
+(.) t
+1 0 0 -1 118.475 85.706 Tm
+(.) t
+1 0 0 -1 121.475 85.706 Tm
+(.) t
+1 0 0 -1 124.475 85.706 Tm
+(.) t
+1 0 0 -1 127.475 85.706 Tm
+(.) t
+1 0 0 -1 130.475 85.706 Tm
+(.) t
+1 0 0 -1 133.475 85.706 Tm
+(.) t
+1 0 0 -1 136.475 85.706 Tm
+(.) t
+1 0 0 -1 139.475 85.706 Tm
+(.) t
+1 0 0 -1 142.475 85.706 Tm
+(.) t
+1 0 0 -1 145.475 85.706 Tm
+(.) t
+1 0 0 -1 148.475 85.706 Tm
+(.) t
+1 0 0 -1 151.475 85.706 Tm
+(.) t
+1 0 0 -1 154.475 85.706 Tm
+(.) t
+1 0 0 -1 157.475 85.706 Tm
+(.) t
+1 0 0 -1 160.475 85.706 Tm
+(.) t
+1 0 0 -1 163.475 85.706 Tm
+(.) t
+1 0 0 -1 166.475 85.706 Tm
+(.) t
+1 0 0 -1 169.475 85.706 Tm
+(.) t
+1 0 0 -1 172.475 85.706 Tm
+(.) t
+1 0 0 -1 175.475 85.706 Tm
+(.) t
+1 0 0 -1 178.475 85.706 Tm
+(.) t
+1 0 0 -1 181.475 85.706 Tm
+(.) t
+1 0 0 -1 184.475 85.706 Tm
+(.) t
+1 0 0 -1 187.475 85.706 Tm
+(.) t
+1 0 0 -1 190.475 85.706 Tm
+(.) t
+1 0 0 -1 193.475 85.706 Tm
+(.) t
+1 0 0 -1 196.475 85.706 Tm
+(.) t
+1 0 0 -1 199.475 85.706 Tm
+(.) t
+1 0 0 -1 202.475 85.706 Tm
+(.) t
+1 0 0 -1 205.475 85.706 Tm
+(.) t
+1 0 0 -1 208.475 85.706 Tm
+(.) t
+1 0 0 -1 211.475 85.706 Tm
+(.) t
+1 0 0 -1 214.475 85.706 Tm
+(.) t
+1 0 0 -1 217.475 85.706 Tm
+(.) t
+1 0 0 -1 220.475 85.706 Tm
+(.) t
+1 0 0 -1 223.475 85.706 Tm
+(.) t
+1 0 0 -1 226.475 85.706 Tm
+(.) t
+1 0 0 -1 229.475 85.706 Tm
+(.) t
+1 0 0 -1 232.475 85.706 Tm
+(.) t
+1 0 0 -1 235.475 85.706 Tm
+(.) t
+1 0 0 -1 238.475 85.706 Tm
+(.) t
+1 0 0 -1 241.475 85.706 Tm
+(.) t
+1 0 0 -1 244.475 85.706 Tm
+(.) t
+1 0 0 -1 247.475 85.706 Tm
+(.) t
+1 0 0 -1 250.475 85.706 Tm
+(.) t
+1 0 0 -1 253.475 85.706 Tm
+(.) t
+1 0 0 -1 256.475 85.706 Tm
+(.) t
+1 0 0 -1 259.475 85.706 Tm
+(.) t
+1 0 0 -1 262.475 85.706 Tm
+(.) t
+1 0 0 -1 265.475 85.706 Tm
+(.) t
+1 0 0 -1 268.475 85.706 Tm
+(.) t
+1 0 0 -1 271.475 85.706 Tm
+(.) t
+1 0 0 -1 274.475 85.706 Tm
+(.) t
+1 0 0 -1 277.475 85.706 Tm
+(.) t
+1 0 0 -1 280.475 85.706 Tm
+(.) t
+1 0 0 -1 283.475 85.706 Tm
+(.) t
+1 0 0 -1 286.475 85.706 Tm
+(.) t
+1 0 0 -1 289.475 85.706 Tm
+(.) t
+1 0 0 -1 292.475 85.706 Tm
+(.) t
+1 0 0 -1 295.475 85.706 Tm
+(.) t
+1 0 0 -1 298.475 85.706 Tm
+(.) t
+1 0 0 -1 301.475 85.706 Tm
+(.) t
+1 0 0 -1 304.475 85.706 Tm
+(.) t
+1 0 0 -1 307.475 85.706 Tm
+(.) t
+1 0 0 -1 310.475 85.706 Tm
+(.) t
+1 0 0 -1 313.475 85.706 Tm
+(.) t
+1 0 0 -1 316.475 85.706 Tm
+(.) t
+1 0 0 -1 319.475 85.706 Tm
+(.) t
+1 0 0 -1 322.475 85.706 Tm
+(.) t
+1 0 0 -1 325.475 85.706 Tm
+(.) t
+1 0 0 -1 328.475 85.706 Tm
+(.) t
+1 0 0 -1 331.475 85.706 Tm
+(.) t
+1 0 0 -1 334.475 85.706 Tm
+(.) t
+1 0 0 -1 337.475 85.706 Tm
+(.) t
+1 0 0 -1 340.475 85.706 Tm
+(.) t
+1 0 0 -1 343.475 85.706 Tm
+(.) t
+1 0 0 -1 346.475 85.706 Tm
+(.) t
+1 0 0 -1 349.475 85.706 Tm
+(.) t
+1 0 0 -1 352.475 85.706 Tm
+(.) t
+1 0 0 -1 355.475 85.706 Tm
+(.) t
+1 0 0 -1 358.475 85.706 Tm
+(.) t
+1 0 0 -1 361.475 85.706 Tm
+(.) t
+1 0 0 -1 364.475 85.706 Tm
+(.) t
+1 0 0 -1 367.475 85.706 Tm
+(.) t
+1 0 0 -1 370.475 85.706 Tm
+(.) t
+1 0 0 -1 373.475 85.706 Tm
+(.) t
+1 0 0 -1 376.475 85.706 Tm
+(.) t
+1 0 0 -1 379.475 85.706 Tm
+(.) t
+1 0 0 -1 382.475 85.706 Tm
+(.) t
+1 0 0 -1 385.475 85.706 Tm
+(.) t
+1 0 0 -1 388.475 85.706 Tm
+(.) t
+1 0 0 -1 391.475 85.706 Tm
+(.) t
+1 0 0 -1 394.475 85.706 Tm
+(.) t
+1 0 0 -1 397.475 85.706 Tm
+(.) t
+1 0 0 -1 400.475 85.706 Tm
+(.) t
+1 0 0 -1 403.475 85.706 Tm
+(.) t
+1 0 0 -1 406.475 85.706 Tm
+(.) t
+1 0 0 -1 409.475 85.706 Tm
+(.) t
+1 0 0 -1 412.475 85.706 Tm
+(.) t
+1 0 0 -1 415.475 85.706 Tm
+(.) t
+1 0 0 -1 418.475 85.706 Tm
+(.) t
+1 0 0 -1 421.475 85.706 Tm
+(.) t
+1 0 0 -1 424.475 85.706 Tm
+(.) t
+1 0 0 -1 427.475 85.706 Tm
+(.) t
+1 0 0 -1 430.475 85.706 Tm
+(.) t
+1 0 0 -1 433.475 85.706 Tm
+(.) t
+1 0 0 -1 436.475 85.706 Tm
+(.) t
+1 0 0 -1 439.475 85.706 Tm
+(.) t
+1 0 0 -1 446.273 85.706 Tm
+(5) t
+1 0 0 -1 48 97.706 Tm
+[(6. ) -985 (C ) -985 (Language ) -985 (Binding)] TJ
+1 0 0 -1 147.289 97.706 Tm
+(.) t
+1 0 0 -1 150.289 97.706 Tm
+(.) t
+1 0 0 -1 153.289 97.706 Tm
+(.) t
+1 0 0 -1 156.289 97.706 Tm
+(.) t
+1 0 0 -1 159.289 97.706 Tm
+(.) t
+1 0 0 -1 162.289 97.706 Tm
+(.) t
+1 0 0 -1 165.289 97.706 Tm
+(.) t
+1 0 0 -1 168.289 97.706 Tm
+(.) t
+1 0 0 -1 171.289 97.706 Tm
+(.) t
+1 0 0 -1 174.289 97.706 Tm
+(.) t
+1 0 0 -1 177.289 97.706 Tm
+(.) t
+1 0 0 -1 180.289 97.706 Tm
+(.) t
+1 0 0 -1 183.289 97.706 Tm
+(.) t
+1 0 0 -1 186.289 97.706 Tm
+(.) t
+1 0 0 -1 189.289 97.706 Tm
+(.) t
+1 0 0 -1 192.289 97.706 Tm
+(.) t
+1 0 0 -1 195.289 97.706 Tm
+(.) t
+1 0 0 -1 198.289 97.706 Tm
+(.) t
+1 0 0 -1 201.289 97.706 Tm
+(.) t
+1 0 0 -1 204.289 97.706 Tm
+(.) t
+1 0 0 -1 207.289 97.706 Tm
+(.) t
+1 0 0 -1 210.289 97.706 Tm
+(.) t
+1 0 0 -1 213.289 97.706 Tm
+(.) t
+1 0 0 -1 216.289 97.706 Tm
+(.) t
+1 0 0 -1 219.289 97.706 Tm
+(.) t
+1 0 0 -1 222.289 97.706 Tm
+(.) t
+1 0 0 -1 225.289 97.706 Tm
+(.) t
+1 0 0 -1 228.289 97.706 Tm
+(.) t
+1 0 0 -1 231.289 97.706 Tm
+(.) t
+1 0 0 -1 234.289 97.706 Tm
+(.) t
+1 0 0 -1 237.289 97.706 Tm
+(.) t
+1 0 0 -1 240.289 97.706 Tm
+(.) t
+1 0 0 -1 243.289 97.706 Tm
+(.) t
+1 0 0 -1 246.289 97.706 Tm
+(.) t
+1 0 0 -1 249.289 97.706 Tm
+(.) t
+1 0 0 -1 252.289 97.706 Tm
+(.) t
+1 0 0 -1 255.289 97.706 Tm
+(.) t
+1 0 0 -1 258.289 97.706 Tm
+(.) t
+1 0 0 -1 261.289 97.706 Tm
+(.) t
+1 0 0 -1 264.289 97.706 Tm
+(.) t
+1 0 0 -1 267.289 97.706 Tm
+(.) t
+1 0 0 -1 270.289 97.706 Tm
+(.) t
+1 0 0 -1 273.289 97.706 Tm
+(.) t
+1 0 0 -1 276.289 97.706 Tm
+(.) t
+1 0 0 -1 279.289 97.706 Tm
+(.) t
+1 0 0 -1 282.289 97.706 Tm
+(.) t
+1 0 0 -1 285.289 97.706 Tm
+(.) t
+1 0 0 -1 288.289 97.706 Tm
+(.) t
+1 0 0 -1 291.289 97.706 Tm
+(.) t
+1 0 0 -1 294.289 97.706 Tm
+(.) t
+1 0 0 -1 297.289 97.706 Tm
+(.) t
+1 0 0 -1 300.289 97.706 Tm
+(.) t
+1 0 0 -1 303.289 97.706 Tm
+(.) t
+1 0 0 -1 306.289 97.706 Tm
+(.) t
+1 0 0 -1 309.289 97.706 Tm
+(.) t
+1 0 0 -1 312.289 97.706 Tm
+(.) t
+1 0 0 -1 315.289 97.706 Tm
+(.) t
+1 0 0 -1 318.289 97.706 Tm
+(.) t
+1 0 0 -1 321.289 97.706 Tm
+(.) t
+1 0 0 -1 324.289 97.706 Tm
+(.) t
+1 0 0 -1 327.289 97.706 Tm
+(.) t
+1 0 0 -1 330.289 97.706 Tm
+(.) t
+1 0 0 -1 333.289 97.706 Tm
+(.) t
+1 0 0 -1 336.289 97.706 Tm
+(.) t
+1 0 0 -1 339.289 97.706 Tm
+(.) t
+1 0 0 -1 342.289 97.706 Tm
+(.) t
+1 0 0 -1 345.289 97.706 Tm
+(.) t
+1 0 0 -1 348.289 97.706 Tm
+(.) t
+1 0 0 -1 351.289 97.706 Tm
+(.) t
+1 0 0 -1 354.289 97.706 Tm
+(.) t
+1 0 0 -1 357.289 97.706 Tm
+(.) t
+1 0 0 -1 360.289 97.706 Tm
+(.) t
+1 0 0 -1 363.289 97.706 Tm
+(.) t
+1 0 0 -1 366.289 97.706 Tm
+(.) t
+1 0 0 -1 369.289 97.706 Tm
+(.) t
+1 0 0 -1 372.289 97.706 Tm
+(.) t
+1 0 0 -1 375.289 97.706 Tm
+(.) t
+1 0 0 -1 378.289 97.706 Tm
+(.) t
+1 0 0 -1 381.289 97.706 Tm
+(.) t
+1 0 0 -1 384.289 97.706 Tm
+(.) t
+1 0 0 -1 387.289 97.706 Tm
+(.) t
+1 0 0 -1 390.289 97.706 Tm
+(.) t
+1 0 0 -1 393.289 97.706 Tm
+(.) t
+1 0 0 -1 396.289 97.706 Tm
+(.) t
+1 0 0 -1 399.289 97.706 Tm
+(.) t
+1 0 0 -1 402.289 97.706 Tm
+(.) t
+1 0 0 -1 405.289 97.706 Tm
+(.) t
+1 0 0 -1 408.289 97.706 Tm
+(.) t
+1 0 0 -1 411.289 97.706 Tm
+(.) t
+1 0 0 -1 414.289 97.706 Tm
+(.) t
+1 0 0 -1 417.289 97.706 Tm
+(.) t
+1 0 0 -1 420.289 97.706 Tm
+(.) t
+1 0 0 -1 423.289 97.706 Tm
+(.) t
+1 0 0 -1 426.289 97.706 Tm
+(.) t
+1 0 0 -1 429.289 97.706 Tm
+(.) t
+1 0 0 -1 432.289 97.706 Tm
+(.) t
+1 0 0 -1 435.289 97.706 Tm
+(.) t
+1 0 0 -1 438.289 97.706 Tm
+(.) t
+1 0 0 -1 446.272 97.706 Tm
+(7) t
+1 0 0 -1 48 109.706 Tm
+[(7. ) -390 (Using ) -390 (the ) -390 (TOG-CUP ) -390 (extension ) -390 (and ) -390 (Colormap ) -390 (Utilization ) -390 (Policy)] TJ
+1 0 0 -1 322.183 109.706 Tm
+(.) t
+1 0 0 -1 325.183 109.706 Tm
+(.) t
+1 0 0 -1 328.183 109.706 Tm
+(.) t
+1 0 0 -1 331.183 109.706 Tm
+(.) t
+1 0 0 -1 334.183 109.706 Tm
+(.) t
+1 0 0 -1 337.183 109.706 Tm
+(.) t
+1 0 0 -1 340.183 109.706 Tm
+(.) t
+1 0 0 -1 343.183 109.706 Tm
+(.) t
+1 0 0 -1 346.183 109.706 Tm
+(.) t
+1 0 0 -1 349.183 109.706 Tm
+(.) t
+1 0 0 -1 352.183 109.706 Tm
+(.) t
+1 0 0 -1 355.183 109.706 Tm
+(.) t
+1 0 0 -1 358.183 109.706 Tm
+(.) t
+1 0 0 -1 361.183 109.706 Tm
+(.) t
+1 0 0 -1 364.183 109.706 Tm
+(.) t
+1 0 0 -1 367.183 109.706 Tm
+(.) t
+1 0 0 -1 370.183 109.706 Tm
+(.) t
+1 0 0 -1 373.183 109.706 Tm
+(.) t
+1 0 0 -1 376.183 109.706 Tm
+(.) t
+1 0 0 -1 379.183 109.706 Tm
+(.) t
+1 0 0 -1 382.183 109.706 Tm
+(.) t
+1 0 0 -1 385.183 109.706 Tm
+(.) t
+1 0 0 -1 388.183 109.706 Tm
+(.) t
+1 0 0 -1 391.183 109.706 Tm
+(.) t
+1 0 0 -1 394.183 109.706 Tm
+(.) t
+1 0 0 -1 397.183 109.706 Tm
+(.) t
+1 0 0 -1 400.183 109.706 Tm
+(.) t
+1 0 0 -1 403.183 109.706 Tm
+(.) t
+1 0 0 -1 406.183 109.706 Tm
+(.) t
+1 0 0 -1 409.183 109.706 Tm
+(.) t
+1 0 0 -1 412.183 109.706 Tm
+(.) t
+1 0 0 -1 415.183 109.706 Tm
+(.) t
+1 0 0 -1 418.183 109.706 Tm
+(.) t
+1 0 0 -1 421.183 109.706 Tm
+(.) t
+1 0 0 -1 424.183 109.706 Tm
+(.) t
+1 0 0 -1 427.183 109.706 Tm
+(.) t
+1 0 0 -1 430.183 109.706 Tm
+(.) t
+1 0 0 -1 433.183 109.706 Tm
+(.) t
+1 0 0 -1 436.183 109.706 Tm
+(.) t
+1 0 0 -1 439.183 109.706 Tm
+(.) t
+1 0 0 -1 446.273 109.706 Tm
+(8) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 71.042 10.83 Tm
+(iii) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 1 4
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 0 21.287 Tm
+(Chapter 1. Overview) t
+/Times-Roman 10 F
+1 0 0 -1 48 48.189 Tm
+[(This ) -1072 (extension ) -1072 (has ) -1072 (three ) -1072 (purposes: ) -1072 (a\) ) -1072 (to ) -1072 (provide ) -1072 (mechanism ) -1072 (for ) -1072 (a ) -1072 (special ) -1072 (application ) -1072 
+(\(a ) -1072 (colormap)] TJ
+1 0 0 -1 48 60.189 Tm
+[(manager\) ) 168 (to ) 168 (discover ) 168 (any ) 168 (special ) 168 (colormap ) 168 (requirements, ) 168 (e.g. ) 168 (the ) 168 (colormap ) 168 (entries ) 168 (that ) 168 (are ) 168 (nominally)] TJ
+1 0 0 -1 48 72.189 Tm
+[(reserved ) -534 (for ) -534 (desktop ) -534 (colors ) -534 (in ) -534 (the ) -534 (MS-Windows ) -534 (environment ) -534 (and ) -534 (initialize ) -534 (the ) -534 (default ) -534 (colormap ) -534 
+(so)] TJ
+1 0 0 -1 48 84.189 Tm
+[(that ) 205 (it ) 205 (can ) 205 (be ) 205 (more ) 205 (easily ) 205 (shared; ) 205 (and ) 205 (b\) ) 205 (to ) 205 (encourage ) 205 (colormap ) 205 (sharing ) 205 (and ) 205 (reduce ) 205 (colormap ) 205 
+(flashing)] TJ
+1 0 0 -1 48 96.189 Tm
+[(on ) 509 (low-end ) 509 (8-bit ) 509 (frame ) 509 (buffers ) 509 (by ) 509 (providing ) 509 (a ) 509 (policy ) 509 (for ) 509 (sharing; ) 509 (and ) 509 (c\) ) 509 (when ) 509 (colormaps ) 509 
+(aren't ) 509 (shared,)] TJ
+1 0 0 -1 48 108.189 Tm
+(define a behavior in the X server color allocation scheme to reduce colormap flashing.) t
+1 0 0 -1 48 130.189 Tm
+[(To ) 22 (encourage ) 22 (colormap ) 22 (sharing ) 22 (and ) 22 (accommodate ) 22 (special ) 22 (colormap ) 22 (requirements ) 22 (two ) 22 (new ) 22 (protocols)] TJ
+1 0 0 -1 48 142.189 Tm
+[(are ) 231 (defined: ) 231 (the ) 231 (first ) 231 (provides ) 231 (a ) 231 (way ) 231 (to ) 231 (query ) 231 (the ) 231 (server ) 231 (for ) 231 (a ) 231 (list ) 231 (of ) 231 (reserved ) 231 
+(colormap ) 231 (entries, ) 231 (and ) 231 (the)] TJ
+1 0 0 -1 48 154.189 Tm
+[(second ) 442 (is ) 442 (a ) 442 (way ) 442 (to ) 442 (initialize ) 442 (read-only ) 442 (\(shareable\) ) 442 (colormap ) 442 (entries ) 442 (at ) 442 (specific ) 442 (locations ) 442 (in ) 442 (a ) 442 
+(colormap.)] TJ
+1 0 0 -1 48 176.189 Tm
+[(To ) -287 (minimize ) -287 (colormap ) -287 (flashing ) -287 (when ) -287 (the ) -287 (root ) -287 (window's ) -287 (default ) -287 (visual ) -287 (is ) -287 (one ) -287 (of ) -287 (GrayScale, ) -287 
+(Pseudo-)] TJ
+1 0 0 -1 48 188.189 Tm
+[(Color, ) -130 (or ) -130 (DirectColor, ) -130 (and ) -130 (a ) -130 (private ) -130 (colormap ) -130 (for ) -130 (the ) -130 (default ) -130 (visual ) -130 (is ) -130 (being ) -130 (used, ) -130 (a ) -130 
+(minor ) -130 (\(but ) -130 (com-)] TJ
+1 0 0 -1 48 200.189 Tm
+[(patible\) ) -21 (change ) -21 (to ) -21 (the ) -21 (server ) -21 (implementation ) -21 (of ) -21 (the ) -21 (AllocColor ) -21 (and ) -21 (AllocNamedColor ) -21 (requests ) -21 (is ) -21 (re-)] TJ
+1 0 0 -1 48 212.189 Tm
+[(quired. ) -241 (Where ) -241 (the ) -241 (core ) -241 (protocol ) -241 (says ) -241 (nothing ) -241 (about ) -241 (the ) -241 (pixel ) -241 (values ) -241 (returned, ) -241 (when ) -241 (this ) -241 
+(extension ) -241 (is)] TJ
+1 0 0 -1 48 224.189 Tm
+[(in ) -740 (effect, ) -740 (the ) -740 (AllocColor ) -740 (and ) -740 (AllocNamedColor ) -740 (requests ) -740 (will ) -740 (first ) -740 (look ) -740 (for ) -740 (a ) -740 (matching ) -740 (color ) -740 
+(in ) -740 (the)] TJ
+1 0 0 -1 48 236.189 Tm
+[(default ) -309 (colormap, ) -309 (and, ) -309 (if ) -309 (a ) -309 (match ) -309 (is ) -309 (found ) -309 (and ) -309 (the ) -309 (same ) -309 (cell ) -309 (in ) -309 (the ) -309 (private ) -309 
+(colormap ) -309 (has ) -309 (not ) -309 (already)] TJ
+1 0 0 -1 48 248.189 Tm
+[(been ) 230 (allocated, ) 230 (the ) 230 (color ) 230 (will ) 230 (be ) 230 (allocated ) 230 (in ) 230 (the ) 230 (private ) 230 (colormap ) 230 (at ) 230 (the ) 230 (same ) 230 (locaton ) 230 (as ) 230 
+(in ) 230 (the ) 230 (default)] TJ
+1 0 0 -1 48 260.189 Tm
+(colormap \(instead of in the first available location.\)) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(1) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 2 5
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 0 21.287 Tm
+(Chapter 2. Requests) t
+/Courier 10 F
+1 0 0 -1 48 48.189 Tm
+(QueryVersion) t
+ET
+GR
+GS
+[1 0 0 1 50 61.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(client_major_version: CARD16) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 77.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(client_minor_version: CARD16) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 93.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(=>) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 109.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(server_major_version: CARD16) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 125.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(server_minor_version: CARD16) t
+ET
+GR
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 48 160.189 Tm
+[(If ) -100 (supplied, ) -100 (the ) -100 (client_major_version ) -100 (and ) -100 (client_minor_version ) -100 (indicate ) -100 (what ) -100 (version ) -100 (of ) -100 (the ) -100 (protocol)] TJ
+1 0 0 -1 48 172.189 Tm
+[(the ) -457 (client ) -457 (wants ) -457 (the ) -457 (server ) -457 (to ) -457 (implement. ) -457 (The ) -457 (server ) -457 (version ) -457 (numbers ) -457 (returned ) -457 (indicate ) -457 (the ) -457 
+(protocol)] TJ
+1 0 0 -1 48 184.189 Tm
+[(this ) -127 (extension ) -127 (actually ) -127 (supports. ) -127 (This ) -127 (might ) -127 (not ) -127 (equal ) -127 (the ) -127 (version ) -127 (sent ) -127 (by ) -127 (the ) -127 (client. ) -127 
+(An ) -127 (implementa-)] TJ
+1 0 0 -1 48 196.189 Tm
+[(tion ) 128 (can ) 128 (\(but ) 128 (need ) 128 (not\) ) 128 (support ) 128 (more ) 128 (than ) 128 (one ) 128 (version ) 128 (simultaneously. ) 128 (The ) 128 (server_major_version ) 128 (and)] TJ
+1 0 0 -1 48 208.189 Tm
+[(the ) 106 (server_minor_version ) 106 (are ) 106 (a ) 106 (mechanism ) 106 (to ) 106 (support ) 106 (future ) 106 (revisions ) 106 (of ) 106 (the ) 106 (TOG-CUP ) 106 (protocol ) 106 (that)] TJ
+1 0 0 -1 48 220.189 Tm
+[(may ) -339 (be ) -339 (necessary. ) -339 (In ) -339 (general, ) -339 (the ) -339 (major ) -339 (version ) -339 (would ) -339 (increment ) -339 (for ) -339 (incompatible ) -339 (changes, ) -339 (and ) -339 
+(the)] TJ
+1 0 0 -1 48 232.189 Tm
+[(minor ) 207 (version ) 207 (would ) 207 (increment ) 207 (for ) 207 (small ) 207 (upward-compatible ) 207 (changes. ) 207 (Servers ) 207 (that ) 207 (support ) 207 (the ) 207 (proto-)] TJ
+1 0 0 -1 48 244.189 Tm
+[(col ) -220 (defined ) -220 (in ) -220 (this ) -220 (document ) -220 (will ) -220 (return ) -220 (a ) -220 (server_major_version ) -220 (of ) -220 (one ) -220 (\(1\), ) -220 (and ) -220 (a ) -220 
+(server_minor_ver-)] TJ
+1 0 0 -1 48 256.189 Tm
+(sion of zero \(0\).) t
+/Courier 10 F
+1 0 0 -1 48 278.189 Tm
+(GetReservedColormapEntries) t
+ET
+GR
+GS
+[1 0 0 1 50 291.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(screen: CARD32) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 307.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(=>) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 323.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(entries: LISTofCOLORITEM) t
+ET
+GR
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 48 358.189 Tm
+[(This ) -157 (request ) -157 (returns ) -157 (a ) -157 (list ) -157 (of ) -157 (colormap ) -157 (entries ) -157 (\(pixels\) ) -157 (that ) -157 (are ) -157 (reserved ) -157 (by ) -157 (the ) -157 
+(system, ) -157 (e.g. ) -157 (MS-Win-)] TJ
+1 0 0 -1 48 370.189 Tm
+[(dows ) -887 (reserved ) -887 (desktop ) -887 (colors. ) -887 (This ) -887 (list ) -887 (will, ) -887 (at ) -887 (a ) -887 (minimum, ) -887 (contain ) -887 (entries ) -887 (for ) -887 (the ) -887 
+(BlackPixel ) -887 (and)] TJ
+1 0 0 -1 48 382.189 Tm
+[(WhitePixel ) 339 (of ) 339 (the ) 339 (specified ) 339 (screen. ) 339 (The ) 339 (do-red, ) 339 (do-green, ) 339 (and ) 339 (do-blue ) 339 (elements ) 339 (of ) 339 (the ) 339 (COLORITEMs)] TJ
+1 0 0 -1 48 394.189 Tm
+(are unused in this reply.) t
+1 0 0 -1 48 416.189 Tm
+[(Rationale: ) -649 (There ) -649 (are ) -649 (colormap ) -649 (entries ) -649 (\(pixels\) ) -649 (that, ) -649 (e.g., ) -649 (MS-Windows ) -649 (desktop ) -649 (reserves ) -649 (as ) -649 (desktop)] TJ
+1 0 0 -1 48 428.189 Tm
+[(colors, ) -591 (that ) -591 (should ) -591 (not ) -591 (be ) -591 (altered. ) -591 (If ) -591 (they ) -591 (are ) -591 (altered ) -591 (then ) -591 (X ) -591 (programs ) -591 (will ) -591 (cause ) -591 
+(colormap ) -591 (flashing)] TJ
+1 0 0 -1 48 440.189 Tm
+(between X and MS-Windows applications running/displaying on the same desktop.) t
+/Courier 10 F
+1 0 0 -1 48 462.189 Tm
+(StoreColors) t
+ET
+GR
+GS
+[1 0 0 1 50 475.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(cmap: COLORMAP) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 491.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(items: LISTofCOLORITEM) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 507.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(=>) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50 523.859] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(items: LISTofCOLORITEM) t
+ET
+GR
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 48 558.189 Tm
+[(This ) -101 (request ) -101 (changes ) -101 (the ) -101 (colormap ) -101 (entries ) -101 (of ) -101 (the ) -101 (specified ) -101 (pixels. ) -101 (The ) -101 (colormap ) -101 (entries ) -101 (are ) -101 
+(allocated)] TJ
+1 0 0 -1 48 570.189 Tm
+[(as ) 146 (if ) 146 (by ) 146 (an ) 146 (AllocColor ) 146 (request. ) 146 (The ) 146 (do-red, ) 146 (do-green, ) 146 (and ) 146 (do-blue ) 146 (elements ) 146 (of ) 146 (the ) 146 (COLORITEMs ) 146 
+(are)] TJ
+1 0 0 -1 48 582.189 Tm
+[(unused ) 258 (in ) 258 (this ) 258 (request. ) 258 (A ) 258 (boolean ) 258 (alloc-ok ) 258 (element ) 258 (\(a ) 258 (bit\) ) 258 (is ) 258 (returned ) 258 (indicating ) 258 (whether ) 258 (the ) 258 
+(particular)] TJ
+1 0 0 -1 48 594.189 Tm
+(pixel was successfully allocated or not. If successfully allocated the RGB and pixel are returned.) t
+1 0 0 -1 48 616.189 Tm
+[(A ) -43 (Value ) -43 (error ) -43 (is ) -43 (generated ) -43 (if ) -43 (a ) -43 (pixel ) -43 (is ) -43 (not ) -43 (a ) -43 (valid ) -43 (index ) -43 (into ) -43 (cmap. ) -43 (A ) -43 (BadMatch ) -43 
+(error ) -43 (is ) -43 (generated ) -43 (if)] TJ
+1 0 0 -1 48 628.189 Tm
+(if cmap does not belong to a GrayScale, PseudoColor, or DirectColor visual.) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(2) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 3 6
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 0 21.287 Tm
+(Chapter 3. Events and Errors) t
+/Times-Roman 10 F
+1 0 0 -1 48 48.189 Tm
+(No new events or errors are defined by this extension.) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(3) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 4 7
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 0 21.287 Tm
+(Chapter 4. Changes to existing) t
+1 0 0 -1 0 51.146 Tm
+(protocol.) t
+/Times-Roman 10 F
+1 0 0 -1 48 78.048 Tm
+(None.) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(4) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 5 8
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 0 21.287 Tm
+(Chapter 5. Encoding) t
+/Times-Roman 10 F
+1 0 0 -1 48 47.908 Tm
+(The name of this extension is "TOG-CUP".) t
+1 0 0 -1 48 69.627 Tm
+(The conventions used here are the same as those for the core X11 Protocol Encoding.) t
+/Courier 10 F
+1 0 0 -1 48 103.376 Tm
+(QueryVersion) t
+1 0 0 -1 48 115.376 Tm
+(     1     CARD8               opcode) t
+1 0 0 -1 48 127.376 Tm
+(     1     0                   TOG-CUP opcode) t
+1 0 0 -1 48 139.376 Tm
+(     2     2                   request length) t
+1 0 0 -1 48 151.376 Tm
+(     2     CARD16              client_major_version) t
+1 0 0 -1 48 163.376 Tm
+(     2     CARD16              client_minor_version) t
+1 0 0 -1 48 175.376 Tm
+(=>) t
+1 0 0 -1 48 187.376 Tm
+(     1     1                   reply) t
+1 0 0 -1 48 199.376 Tm
+(     1                         unused) t
+1 0 0 -1 48 211.376 Tm
+(     2     CARD16              sequence number) t
+1 0 0 -1 48 223.376 Tm
+(     4     0                   length) t
+1 0 0 -1 48 235.376 Tm
+(     2     CARD16              server_major_version) t
+1 0 0 -1 48 247.376 Tm
+(     2     CARD16              server_minor_number) t
+1 0 0 -1 48 259.376 Tm
+(     20                        unused) t
+1 0 0 -1 48 293.095 Tm
+(GetReservedColormapEntries) t
+1 0 0 -1 48 305.095 Tm
+(     1     CARD8               opcode) t
+1 0 0 -1 48 317.095 Tm
+(     1     1                   TOG-CUP opcode) t
+1 0 0 -1 48 329.095 Tm
+(     2     2                   request length) t
+1 0 0 -1 48 341.095 Tm
+(     4     CARD32              screen) t
+1 0 0 -1 48 353.095 Tm
+(=>) t
+1 0 0 -1 48 365.095 Tm
+(     1     1                   reply) t
+1 0 0 -1 48 377.095 Tm
+(     1                         unused) t
+1 0 0 -1 48 389.095 Tm
+(     2     CARD16              sequence number) t
+1 0 0 -1 48 401.095 Tm
+(     4     3n                  length) t
+1 0 0 -1 48 413.095 Tm
+(     24                        unused) t
+1 0 0 -1 48 425.095 Tm
+(     12n   LISTofCOLORITEM     items) t
+1 0 0 -1 48 458.814 Tm
+(StoreColors) t
+1 0 0 -1 48 470.814 Tm
+(     1     CARD8               opcode) t
+1 0 0 -1 48 482.814 Tm
+(     1     2                   TOG-CUP opcode) t
+1 0 0 -1 48 494.814 Tm
+(     2     2+3n                request length) t
+1 0 0 -1 48 506.814 Tm
+(     4     COLORMAP            cmap) t
+1 0 0 -1 48 518.814 Tm
+(     12n   LISTofCOLORITEM     items) t
+1 0 0 -1 48 530.814 Tm
+(=>) t
+1 0 0 -1 48 542.814 Tm
+(     1     1                   reply) t
+1 0 0 -1 48 554.814 Tm
+(     1                         unused) t
+1 0 0 -1 48 566.814 Tm
+(     2     CARD16              sequence number) t
+1 0 0 -1 48 578.814 Tm
+(     4     3n                  length) t
+1 0 0 -1 48 590.814 Tm
+(     24                        unused) t
+1 0 0 -1 48 602.814 Tm
+(     12n   LISTofCOLORITEM     items) t
+/Times-Roman 10 F
+1 0 0 -1 48 624.503 Tm
+[(\(The ) 389 (definition ) 389 (of ) 389 (COLORITEM ) 389 (here ) 389 (is ) 389 (only ) 389 (for ) 389 (the ) 389 (purpose ) 389 (of ) 389 (defining ) 389 (the ) 389 (additional ) 389 (alloc-ok ) 389 
+(mem-)] TJ
+1 0 0 -1 48 636.503 Tm
+(ber in the CUPStoreColors reply.\)) t
+/Courier 10 F
+1 0 0 -1 48 670.252 Tm
+(  COLORITEM) t
+1 0 0 -1 48 682.252 Tm
+(     4     CARD32              pixel) t
+1 0 0 -1 48 694.252 Tm
+(     2     CARD16              red) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(5) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 6 9
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 56.047 8.33 Tm
+(Encoding) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Courier 10 F
+1 0 0 -1 48 8.36 Tm
+(     2     CARD16              green) t
+1 0 0 -1 48 20.36 Tm
+(     2     CARD16              blue) t
+1 0 0 -1 48 32.36 Tm
+(     1                         alloc-ok) t
+1 0 0 -1 48 44.36 Tm
+(           #x07                unused) t
+1 0 0 -1 48 56.36 Tm
+(           #x08                alloc-ok \(1 is True, 0 is False\)) t
+1 0 0 -1 48 68.36 Tm
+(           #xF0                unused) t
+1 0 0 -1 48 80.36 Tm
+(     1                         unused) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(6) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 7 10
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 0 21.287 Tm
+(Chapter 6. C Language Binding) t
+/Times-Roman 10 F
+1 0 0 -1 48 48.189 Tm
+[(The ) -185 (C ) -185 (functions ) -185 (provide ) -185 (direct ) -185 (access ) -185 (to ) -185 (the ) -185 (protocol ) -185 (and ) -185 (add ) -185 (no ) -185 (additional ) -185 (semantics. ) -185 
+(For ) -185 (complete)] TJ
+1 0 0 -1 48 60.189 Tm
+[(details ) 448 (on ) 448 (the ) 448 (effects ) 448 (of ) 448 (these ) 448 (functions, ) 448 (refer ) 448 (to ) 448 (the ) 448 (appropriate ) 448 (protocol ) 448 (request, ) 448 (which ) 448 (can ) 448 
+(be ) 448 (derived)] TJ
+1 0 0 -1 48 72.189 Tm
+[(by ) -750 (deleting ) -750 (XCup ) -750 (at ) -750 (the ) -750 (start ) -750 (of ) -750 (the ) -750 (function. ) -750 (All ) -750 (functions ) -750 (that ) -750 (have ) -750 (return ) -750 (type ) -750 
+(Status ) -750 (will ) -750 (return)] TJ
+1 0 0 -1 48 84.189 Tm
+(nonzero for success and zero for failure.) t
+1 0 0 -1 48 106.189 Tm
+(The include file for this extension is ) t
+/Courier 10 F
+1 0 0 -1 194.93 106.189 Tm
+(<X11/extensions/Xcup.h>) t
+/Times-Roman 10 F
+1 0 0 -1 332.93 106.189 Tm
+(.) t
+/Courier 10 F
+1 0 0 -1 48 128.219 Tm
+[(Status ) 1532 ] TJ
+/Courier-Bold 10 F
+1 0 0 -1 88.468 128.219 Tm
+[( ) 1532 (XCupQueryVersion)] TJ
+/Courier 10 F
+1 0 0 -1 188.936 128.219 Tm
+(\() t
+/Courier-Oblique 10 F
+1 0 0 -1 194.936 128.219 Tm
+[( ) 1532 (display)] TJ
+/Courier 10 F
+1 0 0 -1 241.404 128.219 Tm
+[(, ) 1532 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 251.872 128.219 Tm
+[( ) 1532 (major_version_return)] TJ
+/Courier 10 F
+1 0 0 -1 376.34 128.219 Tm
+[(, ) 1532 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 386.808 128.219 Tm
+[( ) 1532 (minor_ver-)] TJ
+1 0 0 -1 48 140.219 Tm
+(sion_return) t
+/Courier 10 F
+1 0 0 -1 114 140.219 Tm
+(\);) t
+/Times-Italic 10 F
+1 0 0 -1 48 162.189 Tm
+(display) t
+/Times-Roman 10 F
+1 0 0 -1 202 162.189 Tm
+(Specifies the connection to the X server.) t
+/Times-Italic 10 F
+1 0 0 -1 48 184.189 Tm
+(major_version_return) t
+/Times-Roman 10 F
+1 0 0 -1 202 184.189 Tm
+(Returns the major version supported by the server.) t
+/Times-Italic 10 F
+1 0 0 -1 48 206.189 Tm
+(minor_version_return) t
+/Times-Roman 10 F
+1 0 0 -1 202 206.189 Tm
+(Returns the minor version supported by the server.) t
+1 0 0 -1 48 228.189 Tm
+[(XCupQueryVersions ) -1265 (sets ) -1265 (major_version_return ) -1265 (and ) -1265 (minor_version_return ) -1265 (to ) -1265 (the ) -1265 (major ) -1265 (and ) -1265 (minor)] TJ
+1 0 0 -1 48 240.189 Tm
+[(TOG-CUP ) -257 (protocol ) -257 (version ) -257 (supported ) -257 (by ) -257 (the ) -257 (server. ) -257 (If ) -257 (the ) -257 (TOG-CUP ) -257 (library ) -257 (is ) -257 (compatible ) -257 (with ) -257 
+(the)] TJ
+1 0 0 -1 48 252.189 Tm
+[(version ) -445 (returned ) -445 (by ) -445 (the ) -445 (server, ) -445 (it ) -445 (returns ) -445 (nonzero. ) -445 (If ) -445 (dpy ) -445 (does ) -445 (not ) -445 (support ) -445 (the ) -445 
+(TOG-CUP ) -445 (extension,)] TJ
+1 0 0 -1 48 264.189 Tm
+[(or ) -655 (if ) -655 (there ) -655 (was ) -655 (an ) -655 (error ) -655 (during ) -655 (communication ) -655 (with ) -655 (the ) -655 (server, ) -655 (or ) -655 (if ) -655 (the ) -655 (server ) -655 
+(and ) -655 (library ) -655 (protocol)] TJ
+1 0 0 -1 48 276.189 Tm
+[(versions ) 517 (are ) 517 (incompatible, ) 517 (it ) 517 (returns ) 517 (zero. ) 517 (No ) 517 (other ) 517 (XCup ) 517 (functions ) 517 (may ) 517 (be ) 517 (called ) 517 (before ) 517 (this ) 517 
+(function.)] TJ
+1 0 0 -1 48 288.189 Tm
+(If a client violates this rule, the effects of all subsequent XCup calls that it makes are undefined.) t
+1 0 0 -1 48 310.189 Tm
+(To get the list of reserved colormap entries, use XCupGetReservedColormapEntries.) t
+/Courier 10 F
+1 0 0 -1 48 332.219 Tm
+[(Status ) -3610 ] TJ
+/Courier-Bold 10 F
+1 0 0 -1 93.61 332.219 Tm
+[( ) -3610 (XCupGetReservedColormapEntries)] TJ
+/Courier 10 F
+1 0 0 -1 283.22 332.219 Tm
+(\() t
+/Courier-Oblique 10 F
+1 0 0 -1 289.22 332.219 Tm
+[( ) -3610 (display)] TJ
+/Courier 10 F
+1 0 0 -1 340.83 332.219 Tm
+[(, ) -3610 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 356.44 332.219 Tm
+[( ) -3610 (screen)] TJ
+/Courier 10 F
+1 0 0 -1 402.05 332.219 Tm
+[(, ) -3610 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 417.66 332.219 Tm
+[( ) -3610 (col-)] TJ
+1 0 0 -1 48 344.219 Tm
+(ors_out) t
+/Courier 10 F
+1 0 0 -1 90 344.219 Tm
+(, ) t
+/Courier-Oblique 10 F
+1 0 0 -1 102 344.219 Tm
+( ncolors) t
+/Courier 10 F
+1 0 0 -1 150 344.219 Tm
+(\);) t
+/Times-Italic 10 F
+1 0 0 -1 48 366.189 Tm
+(display) t
+/Times-Roman 10 F
+1 0 0 -1 190 366.189 Tm
+(Specifies the connection to the X server.) t
+/Times-Italic 10 F
+1 0 0 -1 48 388.189 Tm
+(colors_out) t
+/Times-Roman 10 F
+1 0 0 -1 190 388.189 Tm
+(Returns the values reserved by the server.) t
+/Times-Italic 10 F
+1 0 0 -1 48 410.189 Tm
+(ncolors) t
+/Times-Roman 10 F
+1 0 0 -1 190 410.189 Tm
+(Returns the number of items in colors_out.) t
+1 0 0 -1 48 432.189 Tm
+[(The ) 250 (XCupGetReservedColormapEntries ) 250 (function ) 250 (gets ) 250 (system ) 250 (specific ) 250 (colormap ) 250 (entries. ) 250 (E.g. ) 250 (the ) 250 (MS-)] TJ
+1 0 0 -1 48 444.189 Tm
+[(Windows ) -463 (desktop ) -463 (uses ) -463 (N ) -463 (colormap ) -463 (entries ) -463 (at ) -463 (the ) -463 (beginning ) -463 (\(0..N\) ) -463 (and ) -463 (end ) -463 (\(256-N..255\) ) -463 (of ) -463 
+(the ) -463 (col-)] TJ
+1 0 0 -1 48 456.189 Tm
+(ormap. Use XFree to free colors_out.) t
+1 0 0 -1 48 478.189 Tm
+(To allocate one or more read-only color cells with RGB values, use XCupStoreColors.) t
+/Courier 10 F
+1 0 0 -1 48 500.219 Tm
+[(Status ) -141 ] TJ
+/Courier-Bold 10 F
+1 0 0 -1 90.141 500.219 Tm
+[( ) -141 (XCupStoreColors)] TJ
+/Courier 10 F
+1 0 0 -1 186.282 500.219 Tm
+(\() t
+/Courier-Oblique 10 F
+1 0 0 -1 192.282 500.219 Tm
+[( ) -141 (display)] TJ
+/Courier 10 F
+1 0 0 -1 240.423 500.219 Tm
+[(, ) -141 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 252.564 500.219 Tm
+[( ) -141 (colormap)] TJ
+/Courier 10 F
+1 0 0 -1 306.705 500.219 Tm
+[(, ) -141 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 318.846 500.219 Tm
+[( ) -141 (colors_in_out)] TJ
+/Courier 10 F
+1 0 0 -1 402.987 500.219 Tm
+[(, ) -141 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 415.128 500.219 Tm
+[( ) -141 (ncol-)] TJ
+1 0 0 -1 48 512.219 Tm
+(ors) t
+/Courier 10 F
+1 0 0 -1 66 512.219 Tm
+(\);) t
+/Times-Italic 10 F
+1 0 0 -1 48 534.189 Tm
+(display) t
+/Times-Roman 10 F
+1 0 0 -1 202 534.189 Tm
+(Specifies the connection to the X server.) t
+/Times-Italic 10 F
+1 0 0 -1 48 556.189 Tm
+(colormap) t
+/Times-Roman 10 F
+1 0 0 -1 202 556.189 Tm
+(Specifies the colormap.) t
+/Times-Italic 10 F
+1 0 0 -1 48 578.189 Tm
+(colors_in_out) t
+/Times-Roman 10 F
+1 0 0 -1 202 578.189 Tm
+[(Specifies ) 13 (and ) 13 (returns ) 13 (the ) 13 (values ) 13 (actually ) 13 (used ) 13 (in ) 13 (the ) 13 (colormap.)] TJ
+/Times-Italic 10 F
+1 0 0 -1 48 600.189 Tm
+(ncolors) t
+/Times-Roman 10 F
+1 0 0 -1 202 600.189 Tm
+(Specifies the number of items in colors_in_out.) t
+1 0 0 -1 48 622.189 Tm
+[(The ) 238 (XCupStoreColors ) 238 (function ) 238 (changes ) 238 (the ) 238 (colormap ) 238 (entries ) 238 (of ) 238 (the ) 238 (pixel ) 238 (values ) 238 (specified ) 238 (in ) 238 (the ) 238 (pixel)] TJ
+1 0 0 -1 48 634.189 Tm
+[(members ) -446 (of ) -446 (the ) -446 (XColor ) -446 (structures. ) -446 (The ) -446 (colormap ) -446 (entries ) -446 (are ) -446 (allocated ) -446 (as ) -446 (if ) -446 (an ) -446 (AllocColor ) -446 
+(had ) -446 (been)] TJ
+1 0 0 -1 48 646.189 Tm
+[(used ) -23 (instead, ) -23 (i.e. ) -23 (the ) -23 (colors ) -23 (are ) -23 (read-only ) -23 (\(shareable\). ) -23 (XCupStoreColors ) -23 (returns ) -23 (the ) -23 (number ) -23 (of ) -23 (colors)] TJ
+1 0 0 -1 48 658.189 Tm
+(that were successfully allocated in the colormap.) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(7) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Helvetica-Bold
+%%+ font Times-Italic
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 8 11
+%%PageBoundingBox: 0 0 595 842
+%%PageHiResBoundingBox: 0 0 595.275 841.889
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [595 842]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 841.889] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+[1 0 0 1 150.425 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 300.85 0] CT
+GS
+150.425 14.25  translate 
+180  rotate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 777.089] CT
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 0 21.287 Tm
+(Chapter 7. Using the TOG-CUP) t
+1 0 0 -1 0 51.146 Tm
+(extension and Colormap Utilization) t
+1 0 0 -1 0 81.005 Tm
+(Policy) t
+/Times-Roman 10 F
+1 0 0 -1 48 107.907 Tm
+[(The ) 15 (X ) 15 (server ) 15 (preallocates ) 15 (any ) 15 (hardware ) 15 (or ) 15 (desktop ) 15 (special ) 15 (colors ) 15 (in ) 15 (the ) 15 (default ) 15 (colormap; ) 15 (e.g. ) 15 (UNIX)] TJ
+1 0 0 -1 48 119.907 Tm
+[(X ) 177 (servers ) 177 (preallocate ) 177 (Black ) 177 (and ) 177 (White ) 177 (pixels. ) 177 (PC ) 177 (X ) 177 (servers ) 177 (should ) 177 (also ) 177 (preallocate ) 177 (the ) 177 (MS-Windows)] TJ
+1 0 0 -1 48 131.907 Tm
+[(desktop ) -212 (colors. ) -212 (\(Note ) -212 (to ) -212 (implementors: ) -212 (in ) -212 (the ) -212 (Sample ) -212 (Implementation ) -212 (special ) -212 (colors ) -212 (are ) -212 (allocated ) -212 
+(in)] TJ
+1 0 0 -1 48 143.907 Tm
+(the default colormap in cfbCreateDefColormap for dumb memory framebuffers.\)) t
+1 0 0 -1 48 165.907 Tm
+[(To ) -117 (minimize ) -117 (colormap ) -117 (flash ) -117 (an ) -117 (application ) -117 (which ) -117 (installs ) -117 (its ) -117 (own ) -117 (private ) -117 (colormap ) -117 (should ) -117 (query ) -117 
+(the)] TJ
+1 0 0 -1 48 177.907 Tm
+[(special ) -116 (colors ) -116 (by ) -116 (calling ) -116 (XCupGetReservedColormapEntries, ) -116 (and ) -116 (can ) -116 (then ) -116 (store ) -116 (those ) -116 (entries ) -116 (\(in ) -116 (the)] TJ
+1 0 0 -1 48 189.907 Tm
+(proper location\) in its private colormap using XCupStoreColors.) t
+1 0 0 -1 48 211.907 Tm
+[(Applications ) -364 (which ) -364 (allocate ) -364 (many ) -364 (colors ) -364 (in ) -364 (a ) -364 (screen's ) -364 (default ) -364 (colormap, ) -364 (e.g. ) -364 (a ) -364 (color-cube ) -364 (or ) -364 
+(a ) -364 (gray-)] TJ
+1 0 0 -1 48 223.907 Tm
+[(ramp, ) -1152 (should ) -1152 (allocate ) -1152 (them ) -1152 (with ) -1152 (XCupStoreColors. ) -1152 (By ) -1152 (using ) -1152 (XCupStoreColors ) -1152 (the ) -1152 (colors ) -1152 (will ) -1152 
+(be)] TJ
+1 0 0 -1 48 235.907 Tm
+[(allocated ) -665 (shareable ) -665 (\(read-only\) ) -665 (and ) -665 (any ) -665 (other ) -665 (application ) -665 (which ) -665 (allocates ) -665 (the ) -665 (same ) -665 (color ) -665 (will ) -665 
+(share)] TJ
+1 0 0 -1 48 247.907 Tm
+(that color cell.) t
+ET
+GR
+GR
+GS
+[0 -1 1 0 523.275 777.089] CT
+GR
+GS
+[1 0 0 1 72 777.089] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GS
+[1 0 0 1 150.425 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 72.712 10.83 Tm
+(8) t
+ET
+GR
+GR
+GS
+[1 0 0 1 300.85 14.3] CT
+GS
+0 0.25  translate 
+0 0 M
+0 -0.25 L
+150.425 -0.25 L
+150.425 0 L
+150.425 0.25 L
+0 0.25 L
+cp
+clip N
+0.5 LW
+0 0 M 150.425 0 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Trailer
+%%Pages: 11
+%%BoundingBox: 0 0 596 842
+%%HiResBoundingBox: 0 0 595.275 841.889
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Helvetica-Bold
+%%+ font Times-Italic
+%%+ font Times-Roman
+%%DocumentSuppliedResources: encoding WinAnsiEncoding
+%%+ procset (Apache FOP Std ProcSet) 1.0 0
+%%+ procset (Apache XML Graphics EPS ProcSet) 1.0 0
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%EOF
