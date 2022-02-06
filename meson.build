@@ -57,12 +57,14 @@ pc_data = configuration_data()
 pc_data.set('prefix', get_option('prefix'))
 # meson does not allow installing the includedir outside of the prefix
 pc_data.set('includedir', '${prefix}/' + get_option('includedir'))
+# Dirs of external packages
+pkgconfigdatadir = get_option('pkgconfigdatadir') != '' ? get_option('pkgconfigdatadir') : get_option('datadir') / 'pkgconfig'
 
 foreach pc : pcs
     configure_file(
         input : pc + '.pc.in',
         output : pc + '.pc',
-        install_dir : get_option('datadir') + '/pkgconfig',
+        install_dir : pkgconfigdatadir,
         configuration : pc_data,
     )
 endforeach
@@ -100,7 +102,7 @@ if get_option('legacy') == true
         configure_file(
             input : pc + '.pc.in',
             output : pc + '.pc',
-            install_dir : get_option('datadir') + '/pkgconfig',
+            install_dir : pkgconfigdatadir,
             configuration : pc_data,
         )
     endforeach
