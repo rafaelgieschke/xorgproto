@@ -695,18 +695,15 @@ syntactic conventions and data types established there.
 4     WINDOW                 window
 1     SWAPACTION             swap action
 3                            unused
-</pre><pre class="literallayout">
-VISINFO
+</pre><p>VISINFO</p><pre class="literallayout">
 4     VISUALID                visual
 1     CARD8                   depth
 1     CARD8                   perflevel
 2                             unused
-
-SCREENVISINFO
+</pre><p>SCREENVISINFO</p><pre class="literallayout">
 4     CARD32                  n, number in list
 8n    LISTofVISINFO           n VISINFOs
-
-BUFFER_ATTRIBUTES
+</pre><p>BUFFER_ATTRIBUTES</p><pre class="literallayout">
 4     WINDOW                 window
 </pre></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="Error"></a>Error</h2></div></div></div><p><code class="function">Buffer</code></p><pre class="literallayout">
 1     0                       error
@@ -716,8 +713,7 @@ BUFFER_ATTRIBUTES
 2     CARD16                  minor-opcode
 1     CARD8                   major-opcode
 21                            unused
-</pre></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="Request"></a>Request</h2></div></div></div><pre class="literallayout">
-DBEGetVersion
+</pre></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="Request"></a>Request</h2></div></div></div><p><code class="function">DBEGetVersion</code></p><pre class="literallayout">
 1     CARD8                  major-opcode
 1     0                      minor-opcode
 2     2                      request length
@@ -768,7 +764,7 @@ DBEGetVersion
 1     1                       Reply
 1                             unused
 2     CARD16                  sequence number
-4     CARD32                  reply length
+4     CARD32                  j, reply length
 4     CARD32                  m, number of SCREENVISINFOs in list
 20                            unused
 4j    LISTofSCREENVISINFO     m SCREENVISINFOs
