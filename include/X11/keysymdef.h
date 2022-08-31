@@ -435,6 +435,7 @@ SOFTWARE.
 #define XK_dead_capital_schwa            0xfe8b
 
 #define XK_dead_greek                    0xfe8c
+#define XK_dead_similar                  0xfe8d
 
 #define XK_First_Virtual_Screen          0xfed0
 #define XK_Prev_Virtual_Screen           0xfed1
