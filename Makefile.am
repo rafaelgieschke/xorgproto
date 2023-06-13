@@ -357,6 +357,9 @@ xwaylandprotopkgconfig_DATA = xwaylandproto.pc
 
 dist_doc_DATA += xwaylandproto.txt
 
+xorgprotopkgconfigdir = $(datadir)/pkgconfig
+xorgprotopkgconfig_DATA = xorgproto.pc
+
 if LEGACY
 XCalibrateincludedir = $(includedir)/X11/extensions
 XCalibrateinclude_HEADERS = \

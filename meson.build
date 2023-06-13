@@ -51,12 +51,14 @@ pcs = [
         'xf86driproto',
         'xf86vidmodeproto',
         'xineramaproto',
+        'xorgproto',
         'xproto',
         'xwaylandproto',
 ]
 
 pc_data = configuration_data()
 pc_data.set('prefix', get_option('prefix'))
+pc_data.set('PACKAGE_VERSION', meson.project_version())
 # meson does not allow installing the includedir outside of the prefix
 pc_data.set('includedir', '${prefix}/' + get_option('includedir'))
 
