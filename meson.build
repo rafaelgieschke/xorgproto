@@ -112,7 +112,16 @@ if get_option('legacy') == true
 endif
 
 ext_xorgproto = declare_dependency(
-    include_directories : include_directories('include')
+    include_directories : [
+        include_directories('include'),
+        include_directories('include' / 'GL'),
+        include_directories('include' / 'GL' / 'internal'),
+        include_directories('include' / 'X11'),
+        include_directories('include' / 'X11' / 'dri'),
+        include_directories('include' / 'X11' / 'extensions'),
+        include_directories('include' / 'X11' / 'fonts'),
+        include_directories('include' / 'X11' / 'PM'),
+    ]
 )
 
 subdir('include')
