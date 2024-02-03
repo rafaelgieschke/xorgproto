@@ -126,6 +126,24 @@ SOFTWARE.
  *   - the protocol specification in specs/keysyms.xml in this repo
  *     https://gitlab.freedesktop.org/xorg/proto/xorgproto
  *
+ * Before removing or changing the order of the keysyms, please consider
+ * the following: it is very difficult to know what keysyms are used and
+ * how.
+ *
+ *   - A sandboxed application may have incompatibilities with the host
+ *     system. For example, if new keysym name is introduced and is made
+ *     the canonical name, then an application with an older keysym parser
+ *     will not be able to parse the new name.
+ *   - Customization of keyboard layout and Compose files are two popular
+ *     use cases. Checking the standard keyboard layout database xkeyboard-config
+ *     https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
+ *     and the standard Compose files in libx11
+ *     https://gitlab.freedesktop.org/xorg/lib/libx11 is a mandatory
+ *     step, but may *not* be enough for a proper impact assessment for
+ *     e.g. keysyms removals.
+ *
+ * Therefore, it is advised to proceed to no removal and to make a new
+ * name canonical only 10 years after its introduction.
  */
 
 #define XK_VoidSymbol                  0xffffff  /* Void symbol */
