@@ -144,7 +144,10 @@ SOFTWARE.
  *     e.g. keysyms removals.
  *
  * Therefore, it is advised to proceed to no removal and to make a new
- * name canonical only 10 years after its introduction.
+ * name canonical only 10 years after its introduction. This means that
+ * some keysyms may have their first listed name deprecated during the
+ * period of transition. Once this period is over, the deprecated name
+ * should be moved after the new canonical name.
  */
 
 #define XK_VoidSymbol                  0xffffff  /* Void symbol */
