@@ -706,7 +706,7 @@ SOFTWARE.
 #define XK_onesuperior                   0x00b9  /* U+00B9 SUPERSCRIPT ONE */
 #define XK_masculine                     0x00ba  /* deprecated inconsistent name (see ordfeminine), use ordmasculine instead */
 #define XK_ordmasculine                  0x00ba  /* U+00BA MASCULINE ORDINAL INDICATOR */
-#define XK_guillemotright                0x00bb  /* deprecated misspelling. Use guillemotright instead. */
+#define XK_guillemotright                0x00bb  /* deprecated misspelling. Use guillemetright instead. */
 #define XK_guillemetright                0x00bb  /* U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK */
 #define XK_onequarter                    0x00bc  /* U+00BC VULGAR FRACTION ONE QUARTER */
 #define XK_onehalf                       0x00bd  /* U+00BD VULGAR FRACTION ONE HALF */
