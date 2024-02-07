@@ -90,14 +90,52 @@ SOFTWARE.
  * existing legacy keysym values in the range 0x0100 to 0x20ff.
  *
  * Where several mnemonic names are defined for the same keysym in this
- * file, all but the first one listed should be considered deprecated,
- * unless the comment explicitly states the alias, e.g.:
+ * file, the first one listed is considered the "canonical" name. This
+ * is the name that should be used when retrieving a keysym name from
+ * its code. The next names are considered "aliases" to the canonical
+ * name.
+ *
+ * Aliases are made explicit by writing in their comment "alias for",
+ * followed by the corresponding canonical name. Example:
  *
  *     #define XK_dead_tilde            0xfe53
  *     #define XK_dead_perispomeni      0xfe53 // alias for dead_tilde
  *
- * Additionally, a keysym can be explicitly deprecated by starting the
- * comment with "deprecated".
+ * The rules to consider a keysym mnemonic name deprecated are:
+ *
+ *   1. A legacy keysym with its Unicode mapping in parentheses is
+ *      deprecated (see above).
+ *
+ *   2. A keysym name is *explicitly* deprecated by starting its comment
+ *      with "deprecated". Examples:
+ *
+ *        #define XK_L1           0xffc8  // deprecated alias for F11
+ *        #define XK_quoteleft    0x0060  // deprecated
+ *
+ *   3. A keysym name is *explicitly* *not* deprecated by starting its
+ *      comment with "non-deprecated alias". Examples:
+ *
+ *       #define XK_dead_tilde       0xfe53
+ *       #define XK_dead_perispomeni 0xfe53 // non-deprecated alias for dead_tilde
+ *
+ *   4. If none of the previous rules apply, an alias is *implicitly*
+ *      deprecated if there is at least one previous name for the
+ *      corresponding keysym that is *not* explicitly deprecated.
+ * 
+ *      Examples:
+ * 
+ *        // SingleCandidate is the canonical name
+ *        #define XK_SingleCandidate        0xff3c
+ *        // Hangul_SingleCandidate is deprecated because it is an alias
+ *        // and it does not start with "non-deprecated alias"
+ *        #define XK_Hangul_SingleCandidate 0xff3c // Single candidate
+ * 
+ *        // guillemotleft is the canonical name, but it is deprecated
+ *        #define XK_guillemotleft  0x00ab // deprecated alias for guillemetleft (misspelling) 
+ *        // guillemetleft is not deprecated, because the keysym has no endorsed name before it.
+ *        #define XK_guillemetleft  0x00ab // U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK 
+ *        // The following hypothetical name is deprecated because guillemetleft come before.
+ *        #define XK_guillemetleft2 0x00ab
  *
  * Mnemonic names for keysyms are defined in this file with lines
  * that match one of these Perl regular expressions:
@@ -185,7 +223,7 @@ SOFTWARE.
 #define XK_Kanji                         0xff21  /* Kanji, Kanji convert */
 #define XK_Muhenkan                      0xff22  /* Cancel Conversion */
 #define XK_Henkan_Mode                   0xff23  /* Start/Stop Conversion */
-#define XK_Henkan                        0xff23  /* Alias for Henkan_Mode */
+#define XK_Henkan                        0xff23  /* non-deprecated alias for Henkan_Mode */
 #define XK_Romaji                        0xff24  /* to Romaji */
 #define XK_Hiragana                      0xff25  /* to Hiragana */
 #define XK_Katakana                      0xff26  /* to Katakana */
@@ -234,7 +272,7 @@ SOFTWARE.
 #define XK_Help                          0xff6a  /* Help */
 #define XK_Break                         0xff6b
 #define XK_Mode_switch                   0xff7e  /* Character set switch */
-#define XK_script_switch                 0xff7e  /* Alias for Mode_switch */
+#define XK_script_switch                 0xff7e  /* non-deprecated alias for Mode_switch */
 #define XK_Num_Lock                      0xff7f
 
 /* Keypad functions, keypad numbers cleverly chosen to map to ASCII */
@@ -382,7 +420,7 @@ SOFTWARE.
 #define XK_ISO_Level5_Shift              0xfe11
 #define XK_ISO_Level5_Latch              0xfe12
 #define XK_ISO_Level5_Lock               0xfe13
-#define XK_ISO_Group_Shift               0xff7e  /* Alias for Mode_switch */
+#define XK_ISO_Group_Shift               0xff7e  /* non-deprecated alias for Mode_switch */
 #define XK_ISO_Group_Latch               0xfe06
 #define XK_ISO_Group_Lock                0xfe07
 #define XK_ISO_Next_Group                0xfe08
@@ -420,7 +458,7 @@ SOFTWARE.
 #define XK_dead_acute                    0xfe51
 #define XK_dead_circumflex               0xfe52
 #define XK_dead_tilde                    0xfe53
-#define XK_dead_perispomeni              0xfe53  /* alias for dead_tilde */
+#define XK_dead_perispomeni              0xfe53  /* non-deprecated alias for dead_tilde */
 #define XK_dead_macron                   0xfe54
 #define XK_dead_breve                    0xfe55
 #define XK_dead_abovedot                 0xfe56
@@ -438,9 +476,9 @@ SOFTWARE.
 #define XK_dead_horn                     0xfe62
 #define XK_dead_stroke                   0xfe63
 #define XK_dead_abovecomma               0xfe64
-#define XK_dead_psili                    0xfe64  /* alias for dead_abovecomma */
+#define XK_dead_psili                    0xfe64  /* non-deprecated alias for dead_abovecomma */
 #define XK_dead_abovereversedcomma       0xfe65
-#define XK_dead_dasia                    0xfe65  /* alias for dead_abovereversedcomma */
+#define XK_dead_dasia                    0xfe65  /* non-deprecated alias for dead_abovereversedcomma */
 #define XK_dead_doublegrave              0xfe66
 #define XK_dead_belowring                0xfe67
 #define XK_dead_belowmacron              0xfe68
@@ -1043,7 +1081,7 @@ SOFTWARE.
 #define XK_kana_N                        0x04dd  /* U+30F3 KATAKANA LETTER N */
 #define XK_voicedsound                   0x04de  /* U+309B KATAKANA-HIRAGANA VOICED SOUND MARK */
 #define XK_semivoicedsound               0x04df  /* U+309C KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK */
-#define XK_kana_switch                   0xff7e  /* Alias for Mode_switch */
+#define XK_kana_switch                   0xff7e  /* non-deprecated alias for Mode_switch */
 #endif /* XK_KATAKANA */
 
 /*
@@ -1142,7 +1180,7 @@ SOFTWARE.
 #define XK_Arabic_farsi_yeh           0x10006cc  /* deprecated alias for Farsi_yeh */
 #define XK_Arabic_yeh_baree           0x10006d2  /* U+06D2 ARABIC LETTER YEH BARREE */
 #define XK_Arabic_heh_goal            0x10006c1  /* U+06C1 ARABIC LETTER HEH GOAL */
-#define XK_Arabic_switch                 0xff7e  /* Alias for Mode_switch */
+#define XK_Arabic_switch                 0xff7e  /* non-deprecated alias for Mode_switch */
 #endif /* XK_ARABIC */
 
 /*
@@ -1334,7 +1372,7 @@ SOFTWARE.
 #define XK_Greek_IOTA                    0x07c9  /* U+0399 GREEK CAPITAL LETTER IOTA */
 #define XK_Greek_KAPPA                   0x07ca  /* U+039A GREEK CAPITAL LETTER KAPPA */
 #define XK_Greek_LAMDA                   0x07cb  /* U+039B GREEK CAPITAL LETTER LAMDA */
-#define XK_Greek_LAMBDA                  0x07cb  /* alias for Greek_LAMDA */
+#define XK_Greek_LAMBDA                  0x07cb  /* non-deprecated alias for Greek_LAMDA */
 #define XK_Greek_MU                      0x07cc  /* U+039C GREEK CAPITAL LETTER MU */
 #define XK_Greek_NU                      0x07cd  /* U+039D GREEK CAPITAL LETTER NU */
 #define XK_Greek_XI                      0x07ce  /* U+039E GREEK CAPITAL LETTER XI */
@@ -1359,7 +1397,7 @@ SOFTWARE.
 #define XK_Greek_iota                    0x07e9  /* U+03B9 GREEK SMALL LETTER IOTA */
 #define XK_Greek_kappa                   0x07ea  /* U+03BA GREEK SMALL LETTER KAPPA */
 #define XK_Greek_lamda                   0x07eb  /* U+03BB GREEK SMALL LETTER LAMDA */
-#define XK_Greek_lambda                  0x07eb  /* alias for Greek_lamda */
+#define XK_Greek_lambda                  0x07eb  /* non-deprecated alias for Greek_lamda */
 #define XK_Greek_mu                      0x07ec  /* U+03BC GREEK SMALL LETTER MU */
 #define XK_Greek_nu                      0x07ed  /* U+03BD GREEK SMALL LETTER NU */
 #define XK_Greek_xi                      0x07ee  /* U+03BE GREEK SMALL LETTER XI */
@@ -1374,7 +1412,7 @@ SOFTWARE.
 #define XK_Greek_chi                     0x07f7  /* U+03C7 GREEK SMALL LETTER CHI */
 #define XK_Greek_psi                     0x07f8  /* U+03C8 GREEK SMALL LETTER PSI */
 #define XK_Greek_omega                   0x07f9  /* U+03C9 GREEK SMALL LETTER OMEGA */
-#define XK_Greek_switch                  0xff7e  /* Alias for Mode_switch */
+#define XK_Greek_switch                  0xff7e  /* non-deprecated alias for Mode_switch */
 #endif /* XK_GREEK */
 
 /*
@@ -1634,7 +1672,7 @@ SOFTWARE.
 #define XK_hebrew_shin                   0x0cf9  /* U+05E9 HEBREW LETTER SHIN */
 #define XK_hebrew_taw                    0x0cfa  /* U+05EA HEBREW LETTER TAV */
 #define XK_hebrew_taf                    0x0cfa  /* deprecated */
-#define XK_Hebrew_switch                 0xff7e  /* Alias for Mode_switch */
+#define XK_Hebrew_switch                 0xff7e  /* non-deprecated alias for Mode_switch */
 #endif /* XK_HEBREW */
 
 /*
@@ -1751,7 +1789,7 @@ SOFTWARE.
 #define XK_Hangul_MultipleCandidate      0xff3d  /* Multiple candidate */
 #define XK_Hangul_PreviousCandidate      0xff3e  /* Previous candidate */
 #define XK_Hangul_Special                0xff3f  /* Special symbols */
-#define XK_Hangul_switch                 0xff7e  /* Alias for Mode_switch */
+#define XK_Hangul_switch                 0xff7e  /* non-deprecated alias for Mode_switch */
 
 /* Hangul Consonant Characters */
 #define XK_Hangul_Kiyeog                 0x0ea1  /* U+3131 HANGUL LETTER KIYEOK */
