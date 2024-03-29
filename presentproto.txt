@@ -398,13 +398,15 @@ The name of this extension is "Present"
 	client. The fence need not be submitted at the time the
 	PresentPixmapSynced request is issued.
 
-	Once the 'release-point' on the release timeline has been signaled, the
-	client may assume that no further GPU or CPU access to the Pixmap by
-	the server will occur as part of the originating PresentPixmapSynced
-	request.  Note that this is a stronger guarantee than what is provided
-	by the 'idle-fence' argument of the PresentPixmap request or the
-	delivery of a PresentIdleNotify event, as those do not necessarily
-	imply that the Pixmap is idle on the GPU.
+	A PresentIdleNotify event will not be sent to the client when the
+	server has finished accessing the Pixmap. Instead, the 'release-point'
+	on the release timeline will be signaled. Afterwards, the client may
+	assume that no further GPU or CPU access to the Pixmap by the server
+	will occur as part of the originating PresentPixmapSynced request.
+	Note that this is a stronger guarantee than what is provided by the
+	'idle-fence' argument of the PresentPixmap request or the delivery of a
+	PresentIdleNotify event, as those do not necessarily imply that the
+	Pixmap is idle on the GPU.
 
 	The server may wait for the acquire point and signal the release point
 	itself, as will typically happen if the request is executed by copying
