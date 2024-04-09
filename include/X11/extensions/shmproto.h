@@ -45,6 +45,7 @@ in this Software without prior written authorization from The Open Group.
 #define X_ShmCreatePixmap		5
 #define X_ShmAttachFd                   6
 #define X_ShmCreateSegment              7
+#define X_ShmAttachFdExt                8
 
 typedef struct _ShmQueryVersion {
     CARD8	reqType;		/* always ShmReqCode */
@@ -219,6 +220,21 @@ typedef struct {
 } xShmCreateSegmentReply;
 /* File descriptor is passed with this reply */
 #define sz_xShmCreateSegmentReply	32
+
+/* Version 1.3 additions */
+typedef struct _ShmAttachFdExt {
+    CARD8	reqType;	/* always ShmReqCode */
+    CARD8	shmReqType;	/* always X_ShmAttachFdExt */
+    CARD16	length;
+    ShmSeg	shmseg;
+    BOOL	readOnly;
+    BYTE	pad0;
+    CARD16	pad1;
+    CARD32	size;		/* size of the buffer */
+    CARD64	offset;		/* offset to pass to mmap() */
+} xShmAttachFdExtReq;
+/* File descriptor is passed with this request */
+#define sz_xShmAttachFdExtReq 32
 
 #undef ShmSeg
 #undef Drawable
