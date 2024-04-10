@@ -1,1 +1,3 @@
 option('legacy', type: 'boolean', value: false)
+option('pkgconfigdatadir', type : 'string', value : '',
+       description : 'directory for arch-independent pkg-config files')
