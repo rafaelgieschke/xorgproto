@@ -156,6 +156,7 @@ AC_CONFIG_FILES([applewmproto.pc
 		 xf86rushproto.pc
 		 xf86vidmodeproto.pc
 		 xineramaproto.pc
+		 xorgproto.pc
 		 xproto.pc
 		 xproxymngproto.pc
 		 xwaylandproto.pc])

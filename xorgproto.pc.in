@@ -1,0 +1,7 @@
+prefix=@prefix@
+includedir=@includedir@
+
+Name: XorgProto
+Description: X Window System unified protocol headers
+Version: @PACKAGE_VERSION@
+Cflags: -I${includedir}
