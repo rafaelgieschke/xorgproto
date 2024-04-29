@@ -1,6 +1,6 @@
 			The X Rendering Extension
-			      Version 0.11
-			       2009-07-15
+			      Version 0.12
+			       2020-4-22
 			      Keith Packard
 			    keithp@keithp.com
 
@@ -36,6 +36,9 @@ This extension was the work of many people, in particular:
 
  +	Owen Taylor for helping specify projective transformations
 
+ +	Maxime Coste for building a client-side version of color glyph
+        support and encouraging adding that here.
+ 
 3. Rendering Model
 
 Render provides a single rendering operation which can be used in a variety of
@@ -1148,7 +1151,21 @@ CreateConicalGradient
 
 	The colors are non premultiplied.
 
-	
+CreateColorGlyphSet
+
+	gsid:		GLYPHSET
+	format:		PICTFORMAT
+
+	Errors:
+		Alloc, IDChoice, PictFormat, Match
+
+	This request creates a container for glyphs.  The glyphset and
+	all contained glyphs are destroyed when gsid and any other names
+	for the glyphset are freed.  Format must be a Direct format, when
+	it contains RGB values, the glyphs are used as the source in
+	compositing and no mask is used, otherwise they are composited using
+	as normal glyphs.
+
 15. Extension Versioning
 
 The Render extension was developed in parallel with the implementation to
@@ -1212,3 +1229,5 @@ what each version before 1.0 implemented:
 	0.11:
 		Blend mode operators
 
+	0.12:
+		CreateColorGlyphSet
