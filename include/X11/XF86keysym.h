@@ -385,6 +385,7 @@
 #define XF86XK_LightsToggle             _EVDEVK(0x21e)  /* v3.10   KEY_LIGHTS_TOGGLE */
 #define XF86XK_ALSToggle                _EVDEVK(0x230)  /* v3.13   KEY_ALS_TOGGLE */
 /* Use: XF86XK_RotationLockToggle       _EVDEVK(0x231)     v4.16   KEY_ROTATE_LOCK_TOGGLE */
+#define XF86XK_RefreshRateToggle        _EVDEVK(0x232)  /* v6.9    KEY_REFRESH_RATE_TOGGLE */
 #define XF86XK_Buttonconfig             _EVDEVK(0x240)  /* v3.16   KEY_BUTTONCONFIG */
 #define XF86XK_Taskmanager              _EVDEVK(0x241)  /* v3.16   KEY_TASKMANAGER */
 #define XF86XK_Journal                  _EVDEVK(0x242)  /* v3.16   KEY_JOURNAL */
