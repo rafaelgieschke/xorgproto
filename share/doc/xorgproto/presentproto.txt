@@ -1,6 +1,6 @@
 			The Present Extension
-			     Version 1.2
-			      2018-02-26
+			     Version 1.4
+			      2023-06-13
       
 			    Keith Packard
 			  keithp@keithp.com
@@ -57,11 +57,14 @@ PRESENTEVENTMASK { PresentConfigureNotifyMask,
 PRESENTOPTION { PresentOptionAsync,
                 PresentOptionCopy,
 		PresentOptionUST,
-		PresentOptionSuboptimal }
+		PresentOptionSuboptimal,
+		PresentOptionAsyncMayTear }
 
 PRESENTCAPABILITY { PresentCapabilityAsync,
 		    PresentCapabilityFence,
-		    PresentCapabilityUST }
+		    PresentCapabilityUST,
+		    PresentCapabilityAsyncMayTear,
+		    PresentCapabilitySyncobj }
 
 PRESENTCOMPLETEKIND { PresentCompleteKindPixmap,
 		      PresentCompleteKindMSCNotify }
@@ -215,7 +218,16 @@ The name of this extension is "Present"
 	If 'options' contains PresentOptionAsync, and the 'target-msc'
 	is less than or equal to the current msc for 'window', then
 	the operation will be performed as soon as possible, not
-	necessarily waiting for the next vertical blank interval.
+	necessarily waiting for the next vertical blank interval. If
+	the target-crtc does not support PresentCapabilityAsyncMayTear,
+	this may result in tearing.
+
+	If the target-crtc supports PresentCapabilityAsyncMayTear,
+	'options' contains PresentOptionAsyncMayTear, and the 'target-msc'
+	is less than or equal to the current msc for 'window', then
+	the operation will be performed as soon as possible, not
+	necessarily waiting for the next vertical blank interval, and
+	possibly resulting in tearing.
 
 	If 'options' contains PresentOptionCopy, then 'pixmap' will be
 	idle, and 'idle-fence' triggered as soon as the operation occurs.
@@ -315,12 +327,22 @@ The name of this extension is "Present"
 	'target' is a WINDOW, then the target CRTC is selected by the
 	X server from among the CRTCs on the screen specified by the window.
 
-	PresentCapabilityAsync means that the target device can flip
-	the scanout buffer mid-frame instead of waiting for a vertical
-	blank interval. The precise latency between the flip request
-	and the actual scanout transition is not defined by this
+	PresentCapabilityAsyncMayTear means that the target device may be
+	able to flip the scanout buffer mid-frame instead of waiting for
+	a vertical blank interval. The precise latency between the flip
+	request and the actual scanout transition is not defined by this
 	specification, but is intended to be no more than a few
 	scanlines.
+
+	If PresentCapabilityAsyncMayTear is not supported,
+	PresentCapabilityAsync means the same as
+	PresentCapabilityAsyncMayTear described above.
+
+	If PresentCapabilityAsyncMayTear is supported,
+	PresentCapabilityAsync means that even if there is already a flip
+	pending in the target device, it may be possible to replace that
+	flip before the next vertical blank interval. The scanout buffer
+	does not change mid-frame though, i.e. there is no tearing.
 
 	PresentCapabilityFence means that the target device can take
 	advantage of SyncFences in the Present operations to improve
@@ -337,6 +359,87 @@ The name of this extension is "Present"
 	the request. The precise accuracy of the scanout time is not
 	defined by the extension, but is expected to be on the order
 	of milliseconds or less.
+
+	PresentCapabilitySyncobj means that the target device supports
+	explicit synchronization using timeline DRM synchronization
+	objects. See the PresentPixmapSynced request for details.
+
+┌───
+    PresentPixmapSynced
+	window: WINDOW
+	pixmap: PIXMAP
+	serial: CARD32
+	valid-area: REGION or None
+	update-area: REGION or None
+	x-off, y-off: INT16
+	target-crtc: CRTC or None
+	acquire-syncobj: SYNCOBJ or None
+	release-syncobj: SYNCOBJ or None
+	acquire-point: CARD64
+	release-point: CARD64
+	options: SETofPRESENTOPTION
+	target-msc: CARD64
+	divisor: CARD64
+	remainder: CARD64
+	notifies: LISTofPRESENTNOTIFY
+└───
+	Errors: Window, Pixmap, Match, Value
+
+	Identical to the PresentPixmap request, except that instead of the
+	'wait-fence' and 'idle-fence' arguments it accepts mandatory
+	'acquire-syncobj' and 'release-syncobj' arguments, along with
+	corresponding acquire and release points, to be used for explicit
+	timeline-based GPU synchronization. The 'acquire-point' and
+	'release-point' are assumed to correspond to timeline points on the
+	respective DRM syncobjs.
+
+	The contents of the Pixmap will not be accessed by the server until the
+	'acquire-point' on the acquire timeline has been signaled by the
+	client. The fence need not be submitted at the time the
+	PresentPixmapSynced request is issued.
+
+	A PresentIdleNotify event will not be sent to the client when the
+	server has finished accessing the Pixmap. Instead, the 'release-point'
+	on the release timeline will be signaled. Afterwards, the client may
+	assume that no further GPU or CPU access to the Pixmap by the server
+	will occur as part of the originating PresentPixmapSynced request.
+	Note that this is a stronger guarantee than what is provided by the
+	'idle-fence' argument of the PresentPixmap request or the delivery of a
+	PresentIdleNotify event, as those do not necessarily imply that the
+	Pixmap is idle on the GPU.
+
+	The server may wait for the acquire point and signal the release point
+	itself, as will typically happen if the request is executed by copying
+	the Pixmap's contents. Alternatively, it may forward the timelines,
+	acquire, and release points to an output sink directly, provided that
+	sink also supports explicit synchronization using DRM syncobjs.
+
+	The server may signal the release point without waiting for the acquire
+	point if the Pixmap's contents are never accessed while servicing the
+	request. This may happen, for example, if a request is discarded due to
+	it being fully occluded by a later request.
+
+	Beware that, if multiple Pixmaps are presented using the same release
+	timeline, the server makes no guarantees on the order in which the
+	release points will be signaled. Of particular concern is that, if the
+	later of the two release points is signaled before the earlier one, it
+	may appear to the client as though the Pixmap with the earlier release
+	point has been released before the server has finished its access to
+	it. Therefore, in general, clients are strongly advised to avoid using
+	the same release timeline with different Pixmaps.
+
+	If the server does not support PresentCapabilitySyncobj, a Value error
+	is generated.
+
+	If either 'acquire-syncobj' or 'release-syncobj' are None or do not
+	refer to previously imported syncobjs, a Value error is generated.
+
+	If 'acquire-point' or 'release-point' is zero, a Value error is
+	generated.
+
+	If 'acquire-syncobj' is equal to 'release-syncobj' and 'acquire-point'
+	is greater than or equal to 'release-point', a Value error is
+	generated.
 
 
 7.1 Requests proposed for a later Present extension version
@@ -584,6 +687,7 @@ A.1 Common Types
 	2	PresentOptionCopy;
 	4	PresentOptionUST
 	8	PresentOptionSuboptimal
+	16	PresentOptionAsyncMayTear
 └───
 
 ┌───
@@ -591,6 +695,7 @@ A.1 Common Types
 	1	PresentCapabilityAsync
 	2	PresentCapabilityFence
 	4	PresentCapabilityUST
+	8	PresentCapabilityAsyncMayTear
 └───
 
 ┌───
@@ -704,6 +809,31 @@ A.2 Protocol Requests
 	2	CARD16			sequence number
 	4	0			reply length
 	4	SETofPRESENTCAPABILITY	capabilities
+└───
+
+┌───
+    PresentPixmapSynced
+	1	CARD8			major opcode
+	1	5			Present opcode
+	2	22+2n			length
+	4	Window			window
+	4	Pixmap			pixmap
+	4	CARD32			serial
+	4	Region			valid-area
+	4	Region			update-area
+	2	INT16			x-off
+	2	INT16			y-off
+	4	CRTC			target-crtc
+	4	SYNCOBJ			acquire-syncobj
+	4	SYNCOBJ			release-syncobj
+	8	CARD64			acquire-point
+	8	CARD64			release-point
+	4	CARD32			options
+	4				unused
+	8	CARD64			target-msc
+	8	CARD64			divisor
+	8	CARD64			remainder
+	8n	LISTofPresentNotify	notifies
 └───
 
 A.3 Protocol Events
