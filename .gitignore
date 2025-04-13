@@ -1,4 +1,5 @@
 *.pc
+*~
 Makefile
 Makefile.in
 Xfuncproto.h
@@ -18,3 +19,4 @@ man/Xprint.7
 missing
 stamp-h1
 stamp-h2
+test-driver
