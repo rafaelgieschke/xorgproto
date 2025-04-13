@@ -1,6 +1,6 @@
 %!PS-Adobe-3.0
-%%Creator: (Apache FOP Version 2.8)
-%%CreationDate: 2024-07-18T08:23:33
+%%Creator: (Apache FOP Version 2.10)
+%%CreationDate: 2025-04-13T14:59:56
 %%LanguageLevel: 3
 %%Pages: (atend)
 %%BoundingBox: (atend)
@@ -517,9 +517,9 @@ GS
 BT
 /Helvetica-Bold 14.4 F
 1 0 0 -1 0 12.319 Tm
-[(X ) -572 (Display ) -572 (Power ) -572 (Management ) -572 (Signaling ) -572 (\(DPMS\) ) -572 (Extension ) -572 (Proto-)] TJ
+[(X ) -8399 (Display ) -8399 (Power ) -8399 (Management ) -8399 (Signaling ) -8399 (\(DPMS\) ) -8399 (Extension)] TJ
 1 0 0 -1 0 29.599 Tm
-(col Specification: X Project Team Standard) t
+(Protocol Specification: X Project Team Standard) t
 /Times-Roman 10 F
 1 0 0 -1 0 42.89 Tm
 (by Rob Lembree) t
@@ -1774,22 +1774,24 @@ BT
 1 0 0 -1 48 106.189 Tm
 (a change timeout that specifies the change interval for non-blanking screen savers.) t
 1 0 0 -1 48 128.189 Tm
-[(The ) -35 (United ) -35 (States' ) -35 (Environmental ) -35 (Protection ) -35 (Agency ) -35 (\(EPA\) ) -35 (Energy ) -35 (Star ) -35 (program ) -35 (requires ) -35 (that ) -35 (mon-)] TJ
+[(The ) -2185 (United ) -2185 (States' ) -2185 (Environmental ) -2185 (Protection ) -2185 (Agency ) -2185 (\(EPA\) ) -2185 (Energy ) -2185 (Star ) -2185 (program ) -2185 (requires ) -2185 (that)] TJ
 1 0 0 -1 48 140.189 Tm
-[(itors ) 2 (power ) 2 (down ) 2 (after ) 2 (some ) 2 (idle ) 2 (time ) 2 (by ) 2 (default. ) 2 (While ) 2 (it ) 2 (is ) 2 (possible ) 2 (to ) 2 (simply ) 2 (overload ) 2 (the ) 2 (existing)] TJ
+[(monitors ) -1022 (power ) -1022 (down ) -1022 (after ) -1022 (some ) -1022 (idle ) -1022 (time ) -1022 (by ) -1022 (default. ) -1022 (While ) -1022 (it ) -1022 (is ) -1022 (possible ) -1022 (to ) -1022 
+(simply ) -1022 (overload ) -1022 (the)] TJ
 1 0 0 -1 48 152.189 Tm
-[(screen ) -72 (saver ) -72 (timeouts, ) -72 (this ) -72 (solution ) -72 (leaves ) -72 (the ) -72 (non-privileged ) -72 (user ) -72 (little ) -72 (to ) -72 (no ) -72 (control ) -72 (over ) -72 (the ) -72 
-(DPMS)] TJ
+[(existing ) -811 (screen ) -811 (saver ) -811 (timeouts, ) -811 (this ) -811 (solution ) -811 (leaves ) -811 (the ) -811 (non-privileged ) -811 (user ) -811 (little ) -811 (to ) -811 (no ) -811 
+(control ) -811 (over)] TJ
 1 0 0 -1 48 164.189 Tm
-[(characteristics ) -704 (of ) -704 (his ) -704 (or ) -704 (her ) -704 (system. ) -704 (For ) -704 (example, ) -704 (disabling ) -704 (DPMS ) -704 (would ) -704 (require ) -704 (some ) -704 (unintended)] TJ
+[(the ) -831 (DPMS ) -831 (characteristics ) -831 (of ) -831 (his ) -831 (or ) -831 (her ) -831 (system. ) -831 (For ) -831 (example, ) -831 (disabling ) -831 (DPMS ) -831 (would ) -831 (require ) -831 
+(some)] TJ
 1 0 0 -1 48 176.189 Tm
-[(side ) -662 (effect ) -662 (in ) -662 (the ) -662 (core ) -662 (screen ) -662 (saver, ) -662 (such ) -662 (as ) -662 (disabling ) -662 (the ) -662 (changing ) -662 (of ) -662 (a ) -662 (non-blanking ) -662 
-(screen ) -662 (saver.)] TJ
+[(unintended ) 639 (side ) 639 (effect ) 639 (in ) 639 (the ) 639 (core ) 639 (screen ) 639 (saver, ) 639 (such ) 639 (as ) 639 (disabling ) 639 (the ) 639 (changing ) 639 (of ) 639 (a ) 639 
+(non-blanking ) 639 (screen)] TJ
 1 0 0 -1 48 188.189 Tm
-[(Providing ) -35 (clients ) -35 (with ) -35 (this ) -35 (control ) -35 (requires ) -35 (an ) -35 (extension ) -35 (to ) -35 (the ) -35 (core ) -35 (X ) -35 (Window ) -35 (System ) -35 (Protocol, ) -35 
-(and)] TJ
+[(saver. ) 575 (Providing ) 575 (clients ) 575 (with ) 575 (this ) 575 (control ) 575 (requires ) 575 (an ) 575 (extension ) 575 (to ) 575 (the ) 575 (core ) 575 (X ) 575 (Window ) 575 (System ) 575 
+(Protocol,)] TJ
 1 0 0 -1 48 200.189 Tm
-(this extension seeks to fill this gap.) t
+(and this extension seeks to fill this gap.) t
 1 0 0 -1 48 222.189 Tm
 [(The ) -685 (design ) -685 (goal ) -685 (of ) -685 (the ) -685 (DPMS ) -685 (extension ) -685 (is ) -685 (to ) -685 (be ) -685 (a ) -685 (logical ) -685 (extension ) -685 (to ) -685 (the ) -685 
 (traditional ) -685 (screen ) -685 (saver.)] TJ
@@ -2109,26 +2111,24 @@ BT
 [(the ) -457 (client ) -457 (wants ) -457 (the ) -457 (server ) -457 (to ) -457 (implement. ) -457 (The ) -457 (server ) -457 (version ) -457 (numbers ) -457 (returned ) -457 (indicate ) -457 (the ) -457 
 (protocol)] TJ
 1 0 0 -1 48 184.197 Tm
-[(this ) -127 (extension ) -127 (actually ) -127 (supports. ) -127 (This ) -127 (might ) -127 (not ) -127 (equal ) -127 (the ) -127 (version ) -127 (sent ) -127 (by ) -127 (the ) -127 (client. ) -127 
-(An ) -127 (implementa-)] TJ
+[(this ) 688 (extension ) 688 (actually ) 688 (supports. ) 688 (This ) 688 (might ) 688 (not ) 688 (equal ) 688 (the ) 688 (version ) 688 (sent ) 688 (by ) 688 (the ) 688 (client. ) 688 (An ) 688 
+(implementation)] TJ
 1 0 0 -1 48 196.197 Tm
-[(tion ) 214 (can ) 214 (\(but ) 214 (need ) 214 (not\) ) 214 (support ) 214 (more ) 214 (than ) 214 (one ) 214 (version ) 214 (simultaneously. ) 214 (The ) 214 ] TJ
+[(can ) -42 (\(but ) -42 (need ) -42 (not\) ) -42 (support ) -42 (more ) -42 (than ) -42 (one ) -42 (version ) -42 (simultaneously. ) -42 (The ) -42 ] TJ
 /Times-Italic 10 F
-1 0 0 -1 346.23 196.197 Tm
+1 0 0 -1 331.209 196.197 Tm
 (server_major_version) t
 /Times-Roman 10 F
-1 0 0 -1 434.55 196.197 Tm
-[( ) 214 (and)] TJ
-1 0 0 -1 48 208.197 Tm
-[(the ) 191 ] TJ
+1 0 0 -1 419.529 196.197 Tm
+[( ) -42 (and ) -42 (the)] TJ
 /Times-Italic 10 F
-1 0 0 -1 62.529 208.197 Tm
+1 0 0 -1 48 208.197 Tm
 (server_minor_version) t
 /Times-Roman 10 F
-1 0 0 -1 150.849 208.197 Tm
-[( ) 191 (are ) 191 (a ) 191 (mechanism ) 191 (to ) 191 (support ) 191 (future ) 191 (revisions ) 191 (of ) 191 (the ) 191 (Display ) 191 (Power ) 191 (Manage-)] TJ
+1 0 0 -1 136.32 208.197 Tm
+[( ) 369 (are ) 369 (a ) 369 (mechanism ) 369 (to ) 369 (support ) 369 (future ) 369 (revisions ) 369 (of ) 369 (the ) 369 (Display ) 369 (Power ) 369 (Management)] TJ
 1 0 0 -1 48 220.197 Tm
-[(ment ) -159 (Signaling ) -159 (protocol ) -159 (which ) -159 (may ) -159 (be ) -159 (necessary. ) -159 (In ) -159 (general, ) -159 (the ) -159 (major ) -159 (version ) -159 (would ) -159 (increment ) -159 
+[(Signaling ) -1902 (protocol ) -1902 (which ) -1902 (may ) -1902 (be ) -1902 (necessary. ) -1902 (In ) -1902 (general, ) -1902 (the ) -1902 (major ) -1902 (version ) -1902 (would ) -1902 (increment ) -1902 
 (for)] TJ
 1 0 0 -1 48 232.197 Tm
 [(incompatible ) 403 (changes, ) 403 (and ) 403 (the ) 403 (minor ) 403 (version ) 403 (would ) 403 (increment ) 403 (for ) 403 (small, ) 403 (upward-compatible ) 403 (changes.)] TJ
@@ -2254,11 +2254,11 @@ BT
 (standby_timeout) t
 /Times-Roman 10 F
 1 0 0 -1 114.11 518.214 Tm
-[( ) -517 (is ) -517 (the ) -517 (amount ) -517 (of ) -517 (time ) -517 (of ) -517 (inactivity ) -517 (before ) -517 (standby ) -517 (mode ) -517 (is ) -517 (invoked. ) -517 (The ) -517 (actual ) -517 
-(ef-)] TJ
+[( ) -1526 (is ) -1526 (the ) -1526 (amount ) -1526 (of ) -1526 (time ) -1526 (of ) -1526 (inactivity ) -1526 (before ) -1526 (standby ) -1526 (mode ) -1526 (is ) -1526 (invoked. ) -1526 (The ) -1526 
+(actual)] TJ
 1 0 0 -1 48 530.214 Tm
-[(fects ) -902 (of ) -902 (this ) -902 (mode ) -902 (are ) -902 (implementation ) -902 (defined, ) -902 (but ) -902 (in ) -902 (the ) -902 (case ) -902 (of ) -902 (DPMS ) -902 (compliant ) -902 
-(hardware, ) -902 (it ) -902 (is)] TJ
+[(effects ) -416 (of ) -416 (this ) -416 (mode ) -416 (are ) -416 (implementation ) -416 (defined, ) -416 (but ) -416 (in ) -416 (the ) -416 (case ) -416 (of ) -416 (DPMS ) -416 (compliant ) -416 
+(hardware, ) -416 (it ) -416 (is)] TJ
 1 0 0 -1 48 542.214 Tm
 [(implemented ) -76 (by ) -76 (shutting ) -76 (off ) -76 (the ) -76 (horizontal ) -76 (sync ) -76 (signal, ) -76 (and ) -76 (pulsing ) -76 (the ) -76 (vertical ) -76 (sync ) -76 (signal. ) -76 (Standby)] TJ
 1 0 0 -1 48 554.214 Tm
@@ -2270,13 +2270,13 @@ BT
 (suspend_timeout) t
 /Times-Roman 10 F
 1 0 0 -1 115.22 588.215 Tm
-[( ) -554 (is ) -554 (the ) -554 (amount ) -554 (of ) -554 (time ) -554 (of ) -554 (inactivity ) -554 (before ) -554 (the ) -554 (second ) -554 (level ) -554 (of ) -554 (power ) -554 (savings ) -554 
-(is ) -554 (in-)] TJ
+[( ) -1499 (is ) -1499 (the ) -1499 (amount ) -1499 (of ) -1499 (time ) -1499 (of ) -1499 (inactivity ) -1499 (before ) -1499 (the ) -1499 (second ) -1499 (level ) -1499 (of ) -1499 (power ) -1499 
+(savings ) -1499 (is)] TJ
 1 0 0 -1 48 600.215 Tm
-[(voked. ) 102 (Suspend ) 102 (mode's ) 102 (physical ) 102 (and ) 102 (electrical ) 102 (characteristics ) 102 (are ) 102 (implementation ) 102 (defined, ) 102 (but ) 102 (in ) 102 (DP-)] TJ
+[(invoked. ) -872 (Suspend ) -872 (mode's ) -872 (physical ) -872 (and ) -872 (electrical ) -872 (characteristics ) -872 (are ) -872 (implementation ) -872 (defined, ) -872 (but ) -872 (in)] TJ
 1 0 0 -1 48 612.215 Tm
-[(MS ) -554 (compliant ) -554 (hardware, ) -554 (results ) -554 (in ) -554 (the ) -554 (pulsing ) -554 (of ) -554 (the ) -554 (horizontal ) -554 (sync ) -554 (signal, ) -554 (and ) -554 (shutting ) -554 
-(off ) -554 (of ) -554 (the)] TJ
+[(DPMS ) 244 (compliant ) 244 (hardware, ) 244 (results ) 244 (in ) 244 (the ) 244 (pulsing ) 244 (of ) 244 (the ) 244 (horizontal ) 244 (sync ) 244 (signal, ) 244 (and ) 244 (shutting ) 244 (off ) 244 
+(of ) 244 (the)] TJ
 1 0 0 -1 48 624.215 Tm
 [(vertical ) 128 (sync ) 128 (signal. ) 128 (Suspend ) 128 (mode ) 128 (recovery ) 128 (is ) 128 (considered ) 128 (to ) 128 (be ) 128 (slower ) 128 (than ) 128 (standby ) 128 (mode, ) 128 (but ) 128 
 (faster)] TJ
@@ -2510,16 +2510,16 @@ GS
 BT
 /Times-Roman 10 F
 1 0 0 -1 48 138.308 Tm
-[(All ) -363 (values ) -363 (are ) -363 (in ) -363 (units ) -363 (of ) -363 (seconds. ) -363 ] TJ
+[(All ) 53 (values ) 53 (are ) 53 (in ) 53 (units ) 53 (of ) 53 (seconds. ) 53 ] TJ
 /Times-Italic 10 F
-1 0 0 -1 188.304 138.308 Tm
+1 0 0 -1 185.386 138.308 Tm
 (standby_timeout) t
 /Times-Roman 10 F
-1 0 0 -1 254.414 138.308 Tm
-[( ) -363 (is ) -363 (the ) -363 (amount ) -363 (of ) -363 (time ) -363 (of ) -363 (inactivity ) -363 (before ) -363 (stand-)] TJ
+1 0 0 -1 251.496 138.308 Tm
+[( ) 53 (is ) 53 (the ) 53 (amount ) 53 (of ) 53 (time ) 53 (of ) 53 (inactivity ) 53 (before ) 53 (standby)] TJ
 1 0 0 -1 48 150.308 Tm
-[(by ) -896 (mode ) -896 (will ) -896 (be ) -896 (invoked. ) -896 (This ) -896 (is ) -896 (the ) -896 (lightest ) -896 (level ) -896 (of ) -896 (power ) -896 (savings, ) -896 (and ) -896 (the ) -896 
-(monitor ) -896 (is ) -896 (generally)] TJ
+[(mode ) -1734 (will ) -1734 (be ) -1734 (invoked. ) -1734 (This ) -1734 (is ) -1734 (the ) -1734 (lightest ) -1734 (level ) -1734 (of ) -1734 (power ) -1734 (savings, ) -1734 (and ) -1734 (the ) -1734 
+(monitor ) -1734 (is ) -1734 (generally)] TJ
 1 0 0 -1 48 162.308 Tm
 [(immediately ) 224 (ready ) 224 (upon ) 224 (detection ) 224 (of ) 224 (user ) 224 (activity. ) 224 (This ) 224 (is ) 224 (most ) 224 (often ) 224 (implemented ) 224 (by ) 224 (shutting ) 224 (off ) 224 
 (the)] TJ
@@ -2569,10 +2569,10 @@ BT
 1 0 0 -1 48 368.283 Tm
 (=>) t
 1 0 0 -1 48 390.278 Tm
-[(This ) -131 (request ) -131 (enables ) -131 (the ) -131 (DPMS ) -131 (characteristics ) -131 (of ) -131 (the ) -131 (server, ) -131 (using ) -131 (the ) -131 (server's ) -131 (currently ) -131 
-(stored ) -131 (time-)] TJ
+[(This ) -1957 (request ) -1957 (enables ) -1957 (the ) -1957 (DPMS ) -1957 (characteristics ) -1957 (of ) -1957 (the ) -1957 (server, ) -1957 (using ) -1957 (the ) -1957 (server's ) -1957 (currently ) -1957 
+(stored)] TJ
 1 0 0 -1 48 402.278 Tm
-(outs. If DPMS is already enabled, no change is effected.) t
+(timeouts. If DPMS is already enabled, no change is effected.) t
 /Courier 10 F
 1 0 0 -1 48 424.273 Tm
 (DPMSDisable) t
@@ -2819,36 +2819,38 @@ GS
 BT
 /Times-Roman 10 F
 1 0 0 -1 48 8.33 Tm
-[(This ) 539 (request ) 539 (returns ) 539 (information ) 539 (about ) 539 (the ) 539 (current ) 539 (DPMS ) 539 (state ) 539 (of ) 539 (the ) 539 (display. ) 539 ] TJ
+[(This ) -2369 (request ) -2369 (returns ) -2369 (information ) -2369 (about ) -2369 (the ) -2369 (current ) -2369 (DPMS ) -2369 (state ) -2369 (of ) -2369 (the ) -2369 (display. ) -2369 ] TJ
 /Times-Italic 10 F
-1 0 0 -1 353.434 8.33 Tm
+1 0 0 -1 388.338 8.33 Tm
 (state) t
 /Times-Roman 10 F
-1 0 0 -1 372.324 8.33 Tm
-[( ) 539 (is ) 539 (one ) 539 (of ) 539 (DPMSEn-)] TJ
+1 0 0 -1 407.228 8.33 Tm
+[( ) -2369 (is ) -2369 (one ) -2369 (of)] TJ
 1 0 0 -1 48 20.33 Tm
-[(abled ) 343 (or ) 343 (DPMSDisabled. ) 343 (If ) 343 ] TJ
+[(DPMSEnabled ) -3255 (or ) -3255 (DPMSDisabled. ) -3255 (If ) -3255 ] TJ
 /Times-Italic 10 F
-1 0 0 -1 158.557 20.33 Tm
+1 0 0 -1 211.29 20.33 Tm
 (state) t
 /Times-Roman 10 F
-1 0 0 -1 177.447 20.33 Tm
-[( ) 343 (is ) 343 (DPMSEnabled, ) 343 ] TJ
+1 0 0 -1 230.18 20.33 Tm
+[( ) -3255 (is ) -3255 (DPMSEnabled, ) -3255 ] TJ
 /Times-Italic 10 F
-1 0 0 -1 253.087 20.33 Tm
+1 0 0 -1 316.615 20.33 Tm
 (power_level) t
 /Times-Roman 10 F
-1 0 0 -1 301.967 20.33 Tm
-[( ) 343 (is ) 343 (returned ) 343 (as ) 343 (one ) 343 (of ) 343 (DPMSModeOn,)] TJ
+1 0 0 -1 365.495 20.33 Tm
+[( ) -3255 (is ) -3255 (returned ) -3255 (as ) -3255 (one)] TJ
 1 0 0 -1 48 32.33 Tm
-(DPMSModeStandby, DPMSModeSuspend or DPMSModeOff, otherwise it is undefined.) t
+[(of ) -1624 (DPMSModeOn, ) -1624 (DPMSModeStandby, ) -1624 (DPMSModeSuspend ) -1624 (or ) -1624 (DPMSModeOff, ) -1624 (otherwise ) -1624 (it ) -1624 (is)] TJ
+1 0 0 -1 48 44.33 Tm
+(undefined.) t
 /Courier 10 F
-1 0 0 -1 48 54.33 Tm
+1 0 0 -1 48 66.33 Tm
 (DPMSSelectInput) t
 ET
 GR
 GS
-[1 0 0 1 50 68] CT
+[1 0 0 1 50 80] CT
 GS
 BT
 /Times-Italic 10 F
@@ -2861,7 +2863,7 @@ ET
 GR
 GR
 GS
-[1 0 0 1 50 84] CT
+[1 0 0 1 50 96] CT
 GS
 BT
 /Times-Roman 10 F
@@ -2873,19 +2875,22 @@ GR
 GS
 BT
 /Times-Roman 10 F
-1 0 0 -1 48 118.33 Tm
-[(This ) 575 (request ) 575 (specifies ) 575 (whether ) 575 (DPMS ) 575 (extension ) 575 (events ) 575 (should ) 575 (be ) 575 (generated ) 575 (for ) 575 (this ) 575 (client. ) 575 (If ) 575 (DPMSIn-)] TJ
 1 0 0 -1 48 130.33 Tm
-[(foNotifyMask ) 623 (is ) 623 (set ) 623 (in ) 623 ] TJ
+[(This ) -2564 (request ) -2564 (specifies ) -2564 (whether ) -2564 (DPMS ) -2564 (extension ) -2564 (events ) -2564 (should ) -2564 (be ) -2564 (generated ) -2564 (for ) -2564 (this ) -2564 (client. ) -2564 
+(If)] TJ
+1 0 0 -1 48 142.33 Tm
+[(DPMSInfoNotifyMask ) -1304 (is ) -1304 (set ) -1304 (in ) -1304 ] TJ
 /Times-Italic 10 F
-1 0 0 -1 137.725 130.33 Tm
+1 0 0 -1 180.998 142.33 Tm
 (event-mask) t
 /Times-Roman 10 F
-1 0 0 -1 182.705 130.33 Tm
-[(, ) 623 (then ) 623 (DPMSInfoNotifyEvent ) 623 (events ) 623 (will ) 623 (be ) 623 (generated ) 623 (whenever ) 623 (the)] TJ
-1 0 0 -1 48 142.33 Tm
-[(current ) 199 (DPMS ) 199 (on/off ) 199 (state ) 199 (or ) 199 (power ) 199 (level ) 199 (changes. ) 199 (If ) 199 (no ) 199 (bits ) 199 (are ) 199 (set, ) 199 (then ) 199 (no ) 199 (events ) 199 
-(will ) 199 (be ) 199 (generated.)] TJ
+1 0 0 -1 225.978 142.33 Tm
+[(, ) -1304 (then ) -1304 (DPMSInfoNotifyEvent ) -1304 (events ) -1304 (will ) -1304 (be ) -1304 (generated)] TJ
+1 0 0 -1 48 154.33 Tm
+[(whenever ) -835 (the ) -835 (current ) -835 (DPMS ) -835 (on/off ) -835 (state ) -835 (or ) -835 (power ) -835 (level ) -835 (changes. ) -835 (If ) -835 (no ) -835 (bits ) -835 (are ) -835 (set, ) -835 
+(then ) -835 (no ) -835 (events)] TJ
+1 0 0 -1 48 166.33 Tm
+(will be generated.) t
 ET
 GR
 GR
@@ -3082,37 +3087,35 @@ GS
 BT
 /Times-Roman 10 F
 1 0 0 -1 48 150.189 Tm
-[(This ) 484 (event ) 484 (is ) 484 (delivered ) 484 (to ) 484 (clients ) 484 (that ) 484 (have ) 484 (requested ) 484 (DPMSInfoNotifyMask ) 484 (events ) 484 (using ) 484 (the ) 484 ] TJ
+[(This ) -2683 (event ) -2683 (is ) -2683 (delivered ) -2683 (to ) -2683 (clients ) -2683 (that ) -2683 (have ) -2683 (requested ) -2683 (DPMSInfoNotifyMask ) -2683 (events ) -2683 (using ) -2683 (the)] TJ
 /Courier 10 F
-1 0 0 -1 415.275 150.189 Tm
-(DPMSS-) t
 1 0 0 -1 48 162.189 Tm
-(electInput) t
+(DPMSSelectInput) t
 /Times-Roman 10 F
-1 0 0 -1 108 162.189 Tm
-[( ) 554 (request ) 554 (whenever ) 554 (the ) 554 (current ) 554 (DPMS ) 554 (on/off ) 554 (state ) 554 (or ) 554 (power ) 554 (level ) 554 (changes. ) 554 ] TJ
+1 0 0 -1 138 162.189 Tm
+[( ) -1819 (request ) -1819 (whenever ) -1819 (the ) -1819 (current ) -1819 (DPMS ) -1819 (on/off ) -1819 (state ) -1819 (or ) -1819 (power ) -1819 (level ) -1819 (changes.)] TJ
 /Times-Italic 10 F
-1 0 0 -1 397.108 162.189 Tm
-(state) t
-/Times-Roman 10 F
-1 0 0 -1 415.998 162.189 Tm
-[( ) 554 (is ) 554 (one ) 554 (of)] TJ
 1 0 0 -1 48 174.189 Tm
-[(DPMSEnabled ) -349 (or ) -349 (DPMSDisabled. ) -349 (If ) -349 ] TJ
-/Times-Italic 10 F
-1 0 0 -1 199.668 174.189 Tm
 (state) t
 /Times-Roman 10 F
-1 0 0 -1 218.558 174.189 Tm
-[( ) -349 (is ) -349 (DPMSEnabled, ) -349 ] TJ
+1 0 0 -1 66.89 174.189 Tm
+[( ) -1855 (is ) -1855 (one ) -1855 (of ) -1855 (DPMSEnabled ) -1855 (or ) -1855 (DPMSDisabled. ) -1855 (If ) -1855 ] TJ
 /Times-Italic 10 F
-1 0 0 -1 296.276 174.189 Tm
+1 0 0 -1 271.446 174.189 Tm
+(state) t
+/Times-Roman 10 F
+1 0 0 -1 290.336 174.189 Tm
+[( ) -1855 (is ) -1855 (DPMSEnabled, ) -1855 ] TJ
+/Times-Italic 10 F
+1 0 0 -1 372.573 174.189 Tm
 (power_level) t
 /Times-Roman 10 F
-1 0 0 -1 345.156 174.189 Tm
-[( ) -349 (is ) -349 (one ) -349 (of ) -349 (DPMSModeOn,)] TJ
+1 0 0 -1 421.453 174.189 Tm
+[( ) -1855 (is ) -1855 (one)] TJ
 1 0 0 -1 48 186.189 Tm
-(DPMSModeStandby, DPMSModeSuspend or DPMSModeOff, otherwise it is undefined.) t
+[(of ) -1624 (DPMSModeOn, ) -1624 (DPMSModeStandby, ) -1624 (DPMSModeSuspend ) -1624 (or ) -1624 (DPMSModeOff, ) -1624 (otherwise ) -1624 (it ) -1624 (is)] TJ
+1 0 0 -1 48 198.189 Tm
+(undefined.) t
 ET
 GR
 GR
